@@ -12,14 +12,7 @@ export default class HomePage {
 
     this.maskedElements = [];
     window.animateCounter = Counter;
-    this.enableSlider();
-
   }
-
-  enableSlider() {
-    new Glide('#main-slider').mount();
-  }
-
 }
 
 new HomePage();

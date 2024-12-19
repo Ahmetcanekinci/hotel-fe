@@ -101,11 +101,6 @@ $escaped-characters: (
   (")", "%29"),
   ) !default;
 
-@mixin items-center {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
 // Options
 //
@@ -1155,3 +1150,15 @@ $user-selects: all,
 
 $print-page-size: a3 !default;
 $print-body-min-width: map-get($grid-breakpoints, "lg") !default;
+
+
+// Custom Variables
+
+$navbar-height: 80px;
+$topbar-height: 50px;
+
+
+
+// Custom Colors
+
+$text-color: #0a0a0a;

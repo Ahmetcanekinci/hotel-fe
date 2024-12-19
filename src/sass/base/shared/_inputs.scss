@@ -1,0 +1,33 @@
+.input-container {
+    display: flex;
+    align-items: center;
+    // border: 1px solid $border-color;
+    padding: 5px 10px;
+    border-radius: 10px;
+    gap: 15px;
+
+    .input-icon {
+        padding-left: 5px;
+
+        img {
+            max-height: 25px;
+            min-height: 25px;
+        }
+    }
+
+    .input-content {
+        &-text {
+            color: #6F7E90;
+            font-size: 13px;
+            letter-spacing: -0.5px;
+        }
+
+        &-input {
+            font-weight: 500;
+        }
+    }
+
+    &:hover {
+        border-color: #2e2e2e;
+    }
+}

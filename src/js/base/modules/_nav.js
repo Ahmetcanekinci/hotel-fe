@@ -4,10 +4,10 @@ export default class Nav {
     this.firstContent = null;
     this.scrollTop = null;
     this.navigation = document.getElementById('nav');
-    this.firstContent = this.navigation.nextElementSibling;
 
     this.toggleScrollClasses();
-    window.addEventListener('scroll', this.onScroll.bind(this),(passiveSupported ? { passive: true } : false));
+    this.openDiv(".language-button", ".language-dropdown");
+    window.addEventListener('scroll', this.onScroll.bind(this), (passiveSupported ? { passive: true } : false));
   }
 
   onScroll() {
@@ -33,5 +33,24 @@ export default class Nav {
       document.body.classList.remove('nav-active');
       document.body.classList.remove('scrolled');
     }
+  }
+
+  openDiv(selector, target) {
+    var selectors = document.querySelectorAll(selector);
+
+    document.addEventListener('click', function () {
+      document.querySelectorAll(target).forEach(t => t.classList.remove('active'));
+    });
+
+    selectors.forEach(item => {
+      item.addEventListener('click', function (event) {
+        event.stopPropagation();
+
+        var matchedTarget = this.querySelector(target);
+        if (matchedTarget) {
+          matchedTarget.classList.toggle('active');
+        }
+      });
+    });
   }
 }

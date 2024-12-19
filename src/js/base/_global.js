@@ -12,6 +12,7 @@ import Passive from './_passive';
 import Nav from './modules/_nav';
 import ContentAnimations from './modules/_content-animation';
 import Env from './_env';
+import Inputs from './shared/_inputs';
 
 // Window Globally definations
 // eslint-disable-next-line no-multi-assign
@@ -22,6 +23,7 @@ export default class Global {
     new Passive
     new Env();
     new Nav();
-    new ContentAnimations(null,true);
+    new Inputs();
+    new ContentAnimations(null, true);
   }
 }

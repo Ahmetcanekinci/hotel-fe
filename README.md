@@ -1,1 +1,1 @@
-#Hotel Files with Gulp
+# project-base-gulp-v2

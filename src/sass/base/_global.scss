@@ -41,6 +41,11 @@
 
 // Other Modules
 @import "../../base/modules/content-animation";
+@import "../../base/navbar";
+@import "../../base/typography";
+@import "../../base/mixins";
+@import "../../base/blocks";
+@import "../../base/shared/inputs";
 
 // Environments
 @import "./env";
@@ -189,6 +194,10 @@ body {
 	}
 }
 
+section {
+	padding: 100px 0;
+}
+
 a {
 	outline-offset: 0px !important;
 	text-decoration: none !important;
@@ -205,10 +214,6 @@ a {
 		&:focus-visible {
 			outline: -webkit-focus-ring-color auto 0px;
 		}
-	}
-
-	&:hover {
-		color: #AF181A;
 	}
 }
 
@@ -368,7 +373,7 @@ tr {
 
 @media screen and (max-width: map-get($grid-breakpoints, sm) + 1) {
 	.container {
-		padding: 0 36px;
+		padding: 0 24px;
 	}
 
 	.container-wide-left {
@@ -380,4 +385,8 @@ tr {
 		padding-right: 36px;
 		margin-right: 0;
 	}
+}
+
+.container {
+	height: 100%;
 }
