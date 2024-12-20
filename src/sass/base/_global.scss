@@ -46,6 +46,7 @@
 @import "../../base/mixins";
 @import "../../base/blocks";
 @import "../../base/shared/inputs";
+@import "./modules/datepicker";
 
 // Environments
 @import "./env";
@@ -217,6 +218,10 @@ a {
 	}
 }
 
+li{
+	list-style-type: none;
+}
+
 .dropdown-item:hover,
 .dropdown-item:focus {
 	color: unset;
@@ -247,64 +252,6 @@ button {
 
 .dropdown-item {
 	cursor: pointer;
-}
-
-table {
-	max-width: 100%;
-	width: fit-content;
-	border: 1px solid #E0E0E0;
-	border-collapse: collapse;
-	margin-bottom: 40px;
-}
-
-th,
-td {
-	padding: 30px 84px 30px 40px;
-	text-align: center;
-	font-size: 16px;
-	line-height: 21px;
-	font-weight: 400;
-}
-
-td {
-	span {
-		display: flex;
-		text-align: left;
-		font-size: 16px;
-		line-height: 21px;
-		padding-top: 40px;
-		padding-left: 25px;
-		font-weight: 400;
-	}
-
-	&:first-child {
-		span {
-			padding-top: 18px;
-		}
-	}
-}
-
-th {
-	font-size: 18px;
-	line-height: 24px;
-	font-weight: 700;
-}
-
-tr {
-	&:nth-child(2n) {
-		background-color: #F7F7F7;
-	}
-
-	td,
-	th {
-		&:first-child {
-			font-size: 18px;
-			line-height: 24px;
-			font-weight: 700;
-			border-right: 1px solid #E0E0E0;
-			text-align: left;
-		}
-	}
 }
 
 .container-wide-left {
