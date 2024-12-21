@@ -41,11 +41,12 @@
 
 // Other Modules
 @import "../../base/modules/content-animation";
-@import "../../base/navbar";
-@import "../../base/typography";
 @import "../../base/mixins";
 @import "../../base/blocks";
 @import "../../base/shared/inputs";
+@import "../../base/shared/typography";
+@import "../../base/shared/navbar";
+@import "../../base/shared/footer";
 @import "../../base/shared/buttons";
 @import "./modules/datepicker";
 
@@ -68,22 +69,21 @@ body {
 	overflow-x: hidden;
 
 	::-webkit-scrollbar {
-		width: 6px;
-		height: 6px
+		width: 4px;
+		height: 4px
 	}
 
 	::-webkit-scrollbar-track {
-		background: #c7c2c2;
+		background: #c9c9c9;
 		border-radius: 0px;
 	}
 
 	::-webkit-scrollbar-thumb {
-		background: #808080;
-		border-radius: 5px;
+		background: $main-color;
 	}
 
 	::-webkit-scrollbar-thumb:hover {
-		background: #808080;
+		background: $main-color;
 	}
 
 	&.active {
@@ -100,17 +100,16 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-	background: #b98687;
+	background: #c9c9c9;
 	border-radius: 0px;
 }
 
 ::-webkit-scrollbar-thumb {
-	background: #AF181A;
-	border-radius: 5px;
+	background: $main-color;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-	background: #AF181A;
+	background: $main-color;
 }
 
 .img-regular {
@@ -197,7 +196,10 @@ body {
 }
 
 section {
-	padding: 100px 0;
+	padding: 40px 0;
+	@media screen and (max-width: 1200px) {
+		padding: 30px 0;
+	}
 }
 
 a {
@@ -333,8 +335,4 @@ button {
 		padding-right: 36px;
 		margin-right: 0;
 	}
-}
-
-.container {
-	height: 100%;
 }

@@ -17,10 +17,11 @@ export default class HomePage {
     window.animateCounter = Counter;
 
     this.headerSlider();
-
     for (const slider of document.getElementsByClassName("rev_slider")) {
       this.projectSlider(slider);
     }
+    this.customersSlider();
+    this.videoClickEvent();
 
   }
 
@@ -106,6 +107,74 @@ export default class HomePage {
       },
     });
 
+  }
+
+  videoClickEvent(){
+    
+    var video = document.getElementById("myVideo"); 
+    var playBtn = document.getElementById("play-video")
+    var pauseBtn = document.getElementById("pause-video")
+
+    if( video !== null) {
+
+      playBtn.addEventListener("click", function() {
+  
+        playBtn.classList.remove("show")
+        playBtn.classList.add("hide")
+  
+        pauseBtn.classList.add("show")
+        pauseBtn.classList.remove("hide")
+  
+        video.play(); 
+  
+      });
+  
+      pauseBtn.addEventListener("click", function() {
+  
+        playBtn.classList.add("show")
+        playBtn.classList.remove("hide")
+  
+        pauseBtn.classList.add("hide")
+        pauseBtn.classList.remove("show")
+  
+        video.pause(); 
+      
+      });
+  
+      video.addEventListener("ended", function() {
+  
+        playBtn.classList.add("show")
+        playBtn.classList.remove("hide")
+  
+        pauseBtn.classList.add("hide")
+        pauseBtn.classList.remove("show")
+  
+      });
+
+    }
+
+  }
+
+  customersSlider() {
+    const customersSlider = new Glide("#customers-slide", {
+      type: "carousel",
+      animationDuration: 400,
+      autoplay: 10000,
+      perView: 4,
+      gap: 40,
+      breakpoints: {
+        1800: {
+          perView: 3        
+        },
+        769: {
+          perView: 1,
+          gap: 20,
+          peek: 40,
+        },
+      },
+    });
+
+    customersSlider.mount();
   }
 
 }

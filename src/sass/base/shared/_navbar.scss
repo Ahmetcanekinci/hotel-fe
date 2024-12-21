@@ -108,7 +108,7 @@
     width: 100%;
     background-color: transparent;
     position: fixed;
-    top: 50px;
+    top: 0px;
     transition: all .3s ease;
     z-index: 5;
     &-logo {
@@ -173,7 +173,7 @@ body{
     &.scrolled{
         .navbar{
             top: 0;
-            background-color: green;
+            background-color: $main-color;
         }
     }
 }
