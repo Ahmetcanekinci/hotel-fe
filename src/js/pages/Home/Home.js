@@ -18,34 +18,32 @@ export default class HomePage {
     this.glides = [];
     this.mountedGlides = [];
     this.slide = null;
-    this.glides = Array.prototype.slice.call( document.getElementsByClassName("gallery-slider") );
+    this.glides = Array.prototype.slice.call(document.getElementsByClassName("gallery-slider"));
     if (this.glides.length > 0) {
       for (const el of this.glides) {
-          if ( document.getElementsByClassName("gallery-slider") !== null ) {
-              this.enableGlide(el);
-              window.addEventListener("resize", this.enableGlide.bind(this, el) );
-          }
+        if (document.getElementsByClassName("gallery-slider") !== null) {
+          this.enableGlide(el);
+          window.addEventListener("resize", this.enableGlide.bind(this, el));
+        }
       }
     }
-    
+
     for (const slider of document.getElementsByClassName("rev_slider")) {
       this.projectSlider(slider);
     }
-    
+
     this.headerSlider();
     this.customersSlider();
     this.videoClickEvent();
-    this.tabController();
-
   }
 
   headerSlider() {
 
-    const headerSlide = document.querySelector("#header-slide");
+    const headerSlide = document.querySelector("#header_slide");
     const slideCount = headerSlide.querySelectorAll(".glide__slide").length;
 
     if (slideCount >= 2) {
-      const headerSlider = new Glide("#header-slide", {
+      const headerSlider = new Glide("#header_slide", {
         type: "carousel",
         animationTimingFunc: "ease-in-out",
         animationDuration: 500,
@@ -55,7 +53,7 @@ export default class HomePage {
         touchRatio: 1,
         dragThreshold: 5,
       });
-  
+
       headerSlider.mount();
     } else {
       headerSlide.classList.add("slider-inactive")
@@ -132,50 +130,37 @@ export default class HomePage {
 
   }
 
-  videoClickEvent(){
-    
-    var video = document.getElementById("myVideo"); 
-    var playBtn = document.getElementById("play-video")
-    var pauseBtn = document.getElementById("pause-video")
+  videoClickEvent() {
+    const video = document.getElementById("my_video");
+    const playButton = document.getElementById("play_video");
+    const pauseButton = document.getElementById("pause_video");
 
-    if( video !== null) {
+    if (!video || !playButton || !pauseButton) return;
 
-      playBtn.addEventListener("click", function() {
-  
-        playBtn.classList.remove("show")
-        playBtn.classList.add("hide")
-  
-        pauseBtn.classList.add("show")
-        pauseBtn.classList.remove("hide")
-  
-        video.play(); 
-  
-      });
-  
-      pauseBtn.addEventListener("click", function() {
-  
-        playBtn.classList.add("show")
-        playBtn.classList.remove("hide")
-  
-        pauseBtn.classList.add("hide")
-        pauseBtn.classList.remove("show")
-  
-        video.pause(); 
-      
-      });
-  
-      video.addEventListener("ended", function() {
-  
-        playBtn.classList.add("show")
-        playBtn.classList.remove("hide")
-  
-        pauseBtn.classList.add("hide")
-        pauseBtn.classList.remove("show")
-  
-      });
+    const toggleButtonVisibility = (buttonToShow, buttonToHide) => {
+      buttonToShow.classList.add("show");
+      buttonToShow.classList.remove("hide");
+      buttonToHide.classList.add("hide");
+      buttonToHide.classList.remove("show");
+    };
 
-    }
+    const playVideo = () => {
+      toggleButtonVisibility(pauseButton, playButton);
+      video.play();
+    };
 
+    const pauseVideo = () => {
+      toggleButtonVisibility(playButton, pauseButton);
+      video.pause();
+    };
+
+    const resetVideoState = () => {
+      toggleButtonVisibility(playButton, pauseButton);
+    };
+
+    playButton.addEventListener("click", playVideo);
+    pauseButton.addEventListener("click", pauseVideo);
+    video.addEventListener("ended", resetVideoState);
   }
 
   customersSlider() {
@@ -200,114 +185,84 @@ export default class HomePage {
           },
         },
       });
-    
+
       glide.mount();
     }
 
   }
-  
+
   enableGlide(glide) {
-      const slideEvents = (slides) => {
-          let elems = document
-              .getElementById("gallery-slide")
-              .querySelectorAll(".glide__slide");
-          let active = null;
+    const slideEvents = (slides) => {
+      let elems = document
+        .getElementById("gallery-slide")
+        .querySelectorAll(".glide__slide");
+      let active = null;
 
-          for (let i = 0; i < elems.length; i++) {
-              let slide = elems[i];
+      for (let i = 0; i < elems.length; i++) {
+        let slide = elems[i];
 
-              slide.classList.remove("prev-first");
-              slide.classList.remove("prev-second");
+        slide.classList.remove("prev-first");
+        slide.classList.remove("prev-second");
 
-              if (slide.classList.contains("glide__slide--active")) {
-                  active = slide;
-              }
-          }
-
-          if (active) {
-              let first = active.previousElementSibling;
-              let second = first.previousElementSibling;
-
-              first.classList.add("prev-first");
-              first.classList.remove("prev-second");
-              second.classList.add("prev-second");
-          }
-      };
-
-      const index = this.mountedGlides.map((x) => x.selector).indexOf(glide);
-
-      if (index !== -1) {
-          this.mountedGlides[index].destroy();
-          this.mountedGlides.splice(index, 1);
+        if (slide.classList.contains("glide__slide--active")) {
+          active = slide;
+        }
       }
 
-      const option = {
-          type: "carousel",
-          perView: 3,
-          focusAt: "center",
-          animationDuration: 400,
-          gap: 0,
-          peek: 150,
-          breakpoints: {
-              1200: {
-                  perView: 1,
-                  peek: 35,
-              },
-          },
-      };
+      if (active) {
+        let first = active.previousElementSibling;
+        let second = first.previousElementSibling;
 
-      let slide = new Glide(glide, option);
-      slide.on("mount.after", () => {});
+        first.classList.add("prev-first");
+        first.classList.remove("prev-second");
+        second.classList.add("prev-second");
+      }
+    };
 
-      slide.mount({
-          flow: (glide, components, events) => {
-              let i = {
-                  slideEvents: (e) => {
-                      slideEvents(e);
-                  },
-              };
+    const index = this.mountedGlides.map((x) => x.selector).indexOf(glide);
 
-              return (
-                  events.on(["mount.after", "run.after"], () => {
-                      i.slideEvents(components.Html.slides);
-                  }),
-                  i
-              );
-          },
-      });
-
-      this.mountedGlides.push(slide);
-  }
-    
-  tabController() {
-
-    const section = document.getElementById('accordion-card');
-    
-    const btns = section.getElementsByClassName('accordion-box');
-    
-    for (const btn of btns ) {
-        
-        btn.addEventListener('click', this.tabEvents.bind(this, btn, section) );
-
+    if (index !== -1) {
+      this.mountedGlides[index].destroy();
+      this.mountedGlides.splice(index, 1);
     }
 
+    const option = {
+      type: "carousel",
+      perView: 3,
+      focusAt: "center",
+      animationDuration: 400,
+      gap: 0,
+      peek: 150,
+      breakpoints: {
+        1200: {
+          perView: 1,
+          peek: 35,
+        },
+      },
+    };
+
+    let slide = new Glide(glide, option);
+    slide.on("mount.after", () => { });
+
+    slide.mount({
+      flow: (glide, components, events) => {
+        let i = {
+          slideEvents: (e) => {
+            slideEvents(e);
+          },
+        };
+
+        return (
+          events.on(["mount.after", "run.after"], () => {
+            i.slideEvents(components.Html.slides);
+          }),
+          i
+        );
+      },
+    });
+
+    this.mountedGlides.push(slide);
   }
-
-  tabEvents( btn, section, ev ) {
-    
-    const target = ( btn.hasAttribute('data-target') ? section.querySelector( btn.getAttribute('data-target') ) : null );
-    
-    if( !target ) return false;
-
-    if ( target.classList.contains('show') ) {
-
-        ev.preventDefault();
-        ev.stopPropagation();
-
-    }
-    
-  }
-
 }
 
 new HomePage();

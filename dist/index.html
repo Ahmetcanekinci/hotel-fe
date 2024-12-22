@@ -76,7 +76,8 @@
                 <a href="javascript:void(0);">Galeri</a>
                 <a href="javascript:void(0);">Odalarımız</a>
 
-                <a href="javascript:void(0);" class="navbar-buttons green-btn-regular animation-btn green-animation">
+                <a href="javascript:void(0);"
+                    class="navbar-buttons green-button-regular animation-button green-animation">
                     <p class="desc-white mb-0 text-white">Rezervasyon Yap</p>
                 </a>
             </div>
@@ -92,104 +93,76 @@
     <!-- Navbar -->
 
     <!-- Header Start -->
-    <section id="main-header" class="position-relative d-flex align-items-center justify-content-center">
-        <div class="bg-slider w-100 h-100 position-absolute">
-            <div class="glide header-slider h-100" id="header-slide">
-                <div class="glide__track h-100" data-glide-el="track">
-                    <ul class="glide__slides h-100">
+    <section class="header-section">
+        <div class="header-background-slider">
+            <div class="glide" id="header_slide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
                         <li class="glide__slide">
-                            <img src="./assets/img/main-header.jpeg" class="img-regular" alt="" />
+                            <img src="./assets/img/main-header.jpeg" class="img-regular" alt="glide-slide-1" />
                         </li>
                         <li class="glide__slide">
-                            <img src="./assets/img/project-slider-1.jpg" class="img-regular" alt="" />
+                            <img src="./assets/img/main-header.jpeg" class="img-regular" alt="glide-slide-2" />
                         </li>
                         <li class="glide__slide">
-                            <img src="./assets/img/project-slider-2.jpg" class="img-regular" alt="" />
-                        </li>
-                        <li class="glide__slide">
-                            <img src="./assets/img/project-slider-3.jpg" class="img-regular" alt="" />
-                        </li>
-                        <li class="glide__slide">
-                            <img src="./assets/img/project-slider-4.jpg" class="img-regular" alt="" />
-                        </li>
-                        <li class="glide__slide">
-                            <img src="./assets/img/project-slider-5.jpg" class="img-regular" alt="" />
+                            <img src="./assets/img/main-header.jpeg" class="img-regular" alt="glide-slide-3" />
                         </li>
                     </ul>
-                    <div class="glide__arrows d-flex justify-content-center align-items-center" data-glide-el="controls">
+                    <div class="glide__arrows" data-glide-el="controls">
                         <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-                            <img src="./assets/img/icons/main-slider-left.svg" alt="arrow" />
+                            <img class="first" src="./assets/img/icons/main-slider-left.svg"
+                                alt="glide-slider-arrow-prev" />
                         </button>
                         <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-                            <img src="./assets/img/icons/main-slider-right.svg" alt="arrow" />
+                            <img class="first" src="./assets/img/icons/main-slider-right.svg"
+                                alt="glide-slider-arrow-next" />
                         </button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="header-container container">
-            <div class="header d-flex flex-column align-items-start">
-                <h3 class="header--subtitle text-white">
-                    Tesisimiz ruhunuzu dinlendirecek
-                </h3>
-                <h1 class="header--title text-white">
-                    Hayat Ağacı Bungalov ile <br> <span>Doğanın içinde huzuru yaşayın</span>
-                </h1>
-                <a href="javascript:void(0);" class="green-btn animation-btn green-animation">
-                    <p class="header-white mb-0 text-white">Rezervasyon Yap</p>
-                    <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy"
-                        alt="arrow right circle icon">
-                </a>
-            </div>
-        </div>
-        <div class="header-bottom w-100 d-flex justify-content-center">
-            <div id="header-close-btn">
-                <img class="w-100 h-100" src="./assets/img/header-close-btn.svg" alt="" />
-            </div>
-            <div class="barboon-box d-flex flex-column flex-lg-row justify-content-between align-items-center">
-                <div class="box-left d-flex">
-                    <div class="left w-100 d-flex justify-content-center flex-wrap">
-                        <div
-                            class="item d-flex align-items-center justify-content-center justify-content-lg-start col-4 col-lg-auto">
-                            <select id="city" class="form-control" name="city">
-                                <option value="" selected disabled>Tesis Seçiniz</option>
-                                <option value="1+1">Bungalov 1+1</option>
-                                <option value="2+1">Bungalov 2+1</option>
-                                <option value="3+1">Bungalov 3+1</option>
-                            </select>
-                        </div>
-                        <div
-                            class="item d-flex align-items-center justify-content-center justify-content-lg-start col-4 col-lg-auto pl-0">
-                            <div class="date">
-                                <a data-date-format="dd-mm-yyyy" href="javascript:void(0);"
-                                    class="btn btn-date d-flex flex-row align-items-center">
-                                    <input id="start-date" class="datepicker" type="text" data-required="true"
-                                        placeholder="Giriş" readonly />
-                                </a>
-                            </div>
-                            <img class="arrow" src="./assets/img/icons/arrow-right-white-small.svg" alt="" />
-                            <div class="date">
-                                <a data-date-format="dd-mm-yyyy" href="javascript:void(0);"
-                                    class="btn btn-date d-flex flex-row align-items-center">
-                                    <input id="end-date" class="datepicker" type="text" data-required="true"
-                                        placeholder="Çıkış" readonly />
-                                </a>
-                            </div>
-                        </div>
-                        <div
-                            class="item d-flex align-items-center justify-content-center justify-content-lg-start col-4 col-lg-auto">
-                            <p class="mb-0">Kişi Sayısı</p>
-                            <a id="decrease-btn" href="javascript:void(0);">-</a>
-                            <p id="guest-count">1</p>
-                            <a id="increase-btn" href="javascript:void(0);">+</a>
-                        </div>
-                        <div
-                            class="item d-flex align-items-center justify-content-center justify-content-lg-start col-4 col-lg-auto">
-                            <a id="search-btn" href="javascript:void(0);"
-                                class="green-btn-regular animation-btn green-animation">
-                                <p class="desc-white mb-0 text-white">Ara</p>
+        <div class="header-checkin">
+            <div class="checkin-box-container">
+                <div class="checkin-box">
+                    <div class="checkin-box-item select-items">
+                        <img src="assets/img/icons/bangalow.png" class="checkin-box-item-icon">
+                        <select class="form-control" name="" id="">
+                            <option value="" selected disabled>Tesis Seçiniz</option>
+                            <option value="1+1">Bungalov 1+1</option>
+                            <option value="2+1">Bungalov 2+1</option>
+                            <option value="3+1">Bungalov 3+1</option>
+                        </select>
+                    </div>
+                    <div class="checkin-box-item date-items">
+                        <div class="date-item">
+                            <img src="assets/img/icons/calenda.png" class="checkin-box-item-icon">
+                            <a data-date-format="dd-mm-yyyy" href="javascript:void(0);">
+                                <input id="check_in" class="datepicker" type="text" data-required="true"
+                                    placeholder="dd/mm/yyyy" readonly />
+                                <span>Giriş</span>
                             </a>
                         </div>
+                        <div class="date-item">
+                            <img src="assets/img/icons/calenda.png" class="checkin-box-item-icon">
+                            <a data-date-format="dd-mm-yyyy" href="javascript:void(0);">
+                                <input id="check_out" class="datepicker" type="text" data-required="true"
+                                    placeholder="dd/mm/yyyy" readonly />
+                                <span>Çıkış</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="checkin-box-item count-items">
+                        <img src="assets/img/icons/person.png" class="checkin-box-item-icon">
+                        <p>Kişi Sayısı</p>
+                        <a id="decrease_button" href="javascript:void(0);">-</a>
+                        <p id="guest_count">1</p>
+                        <a id="increase_button" href="javascript:void(0);">+</a>
+                    </div>
+                    <div class="checkin-box-item search-button">
+                        <a id="search_button" href="javascript:void(0);"
+                            class="green-button-regular animation-button green-animation">
+                            Check
+                        </a>
                     </div>
                 </div>
             </div>
@@ -213,7 +186,7 @@
                         suscipit animi! Reprehenderit nam explicabo nisi nostrum omnis dicta quasi velit maiores vero
                         illo neque vel molestias facilis laboriosam accusamus, officia corrupti optio repellat, odit
                         soluta. Provident.</p>
-                    <a href="javascript:void(0);" class="green-btn animation-btn green-animation">
+                    <a href="javascript:void(0);" class="green-button animation-button green-animation">
                         <p class="header-white mb-0 text-white">Biz Kimiz</p>
                         <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy"
                             alt="arrow right circle icon">
@@ -239,156 +212,305 @@
                 <div class="header-container">
                     <div class="header col-lg-5 d-flex flex-column align-items-start">
                         <h3 class="header--subtitle">
-                            Projeler
+                            Galeri
                         </h3>
                         <h1 class="header--title">
-                            Tesislerimizle <br> <span>fark yaratıyoruz</span>
+                            Sizden gelen <br> <span>fotoğraflar</span>
                         </h1>
+
+                        <a href="javascript:void(0);" class="green-button animation-button green-animation">
+                            <p class="header-white mb-0 text-white">Tüm Tesislerimiz</p>
+                            <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy"
+                                alt="arrow right circle icon">
+                        </a>
                     </div>
-                    <a href="javascript:void(0);" class="green-btn animation-btn green-animation">
-                        <p class="header-white mb-0 text-white">Tüm Tesislerimiz</p>
-                        <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy"
-                            alt="arrow right circle icon">
-                    </a>
+                    <div id="tabSlider" class="our-projects-header-tabs">
+                        <ul class="nav" id="pills-tab">
+                            <li class="nav-item">
+                                <button class="nav-link active" id="satis-devam-tab" data-toggle="pill"
+                                    data-target="#satis-devam" type="button">Dış Görseller</button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" id="satis-tamam-tab" data-toggle="pill"
+                                    data-target="#satis-tamam" type="button">İç Görseller</button>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
+
             </div>
         </div>
         <div class="container-xl px-0">
             <div class="our-projects-slider">
-                <div class="rev_slider">
-                    <!-- Item Example -->
-                    <div class="rev_slide">
-                        <a href="javascript:void(0);" class="project-item">
-                            <div class="img-holder">
-                                <img src="assets/img/project-slider-1.jpg" class="img-regular">
+                <div class="tab-content">
+                    <div class="tab-pane fade show active" id="satis-devam">
+                        <!-- Project slider example -->
+                        <div class="rev_slider">
+                            <!-- Item Example -->
+                            <div class="rev_slide">
+                                <a href="javascript:void(0);" class="project-item">
+                                    <div class="img-holder">
+                                        <img src="assets/img/project-slider-1.jpg" class="img-regular">
+                                    </div>
+                                    <div class="tab-slide-texts">
+                                        <h5>Adam Kule</h5>
+                                        <div class="tab-slide-texts-items">
+                                            <div class="tab-slide-texts-item" data-animate-way="bottom-top"
+                                                data-animate="fade-in" data-animated="false" data-animate-delay="4"
+                                                data-on-animate-start="false">
+                                                Lokasyon
+                                                <span data-animate-way="left-right" data-animate="fade-in"
+                                                    data-animated="false" data-animate-delay="6"
+                                                    data-on-animate-start="false">İstanbul / Maltepe</span>
+                                            </div>
+                                            <div class="tab-slide-texts-item" data-animate-way="bottom-top"
+                                                data-animate="fade-in" data-animated="false" data-animate-delay="8"
+                                                data-on-animate-start="false">
+                                                Proje Alanı
+                                                <span data-animate-way="left-right" data-animate="fade-in"
+                                                    data-animated="false" data-animate-delay="10"
+                                                    data-on-animate-start="false">3000 m2</span>
+                                            </div>
+                                            <div class="tab-slide-texts-item" data-animate-way="bottom-top"
+                                                data-animate="fade-in" data-animated="false" data-animate-delay="12"
+                                                data-on-animate-start="false">
+                                                Daire
+                                                <span data-animate-way="left-right" data-animate="fade-in"
+                                                    data-animated="false" data-animate-delay="14"
+                                                    data-on-animate-start="false">254 residence daire</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="tab-slide-texts">
-                                <h5>Adam Kule</h5>
-                                <div class="tab-slide-texts-items">
-                                    <div class="tab-slide-texts-item" data-animate-way="bottom-top"
-                                        data-animate="fade-in" data-animated="false" data-animate-delay="4"
-                                        data-on-animate-start="false">
-                                        Lokasyon
-                                        <span data-animate-way="left-right" data-animate="fade-in"
-                                            data-animated="false" data-animate-delay="6"
-                                            data-on-animate-start="false">İstanbul / Maltepe</span>
+                            <!-- Item Example -->
+                            <div class="rev_slide">
+                                <a href="javascript:void(0);" class="project-item">
+                                    <div class="img-holder">
+                                        <img src="assets/img/project-slider-2.jpg" class="img-regular">
                                     </div>
-                                    <div class="tab-slide-texts-item" data-animate-way="bottom-top"
-                                        data-animate="fade-in" data-animated="false" data-animate-delay="8"
-                                        data-on-animate-start="false">
-                                        Proje Alanı
-                                        <span data-animate-way="left-right" data-animate="fade-in"
-                                            data-animated="false" data-animate-delay="10"
-                                            data-on-animate-start="false">3000 m2</span>
+                                    <div class="tab-slide-texts">
+                                        <h5>Adam Kule</h5>
+                                        <div class="tab-slide-texts-items">
+                                            <div class="tab-slide-texts-item">
+                                                Lokasyon
+                                                <span>İstanbul / Maltepe</span>
+                                            </div>
+                                            <div class="tab-slide-texts-item">
+                                                Proje Alanı
+                                                <span>3000 m2</span>
+                                            </div>
+                                            <div class="tab-slide-texts-item">
+                                                Daire
+                                                <span>254 residence daire</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="tab-slide-texts-item" data-animate-way="bottom-top"
-                                        data-animate="fade-in" data-animated="false" data-animate-delay="12"
-                                        data-on-animate-start="false">
-                                        Daire
-                                        <span data-animate-way="left-right" data-animate="fade-in"
-                                            data-animated="false" data-animate-delay="14"
-                                            data-on-animate-start="false">254 residence daire</span>
-                                    </div>
-                                </div>
+                                </a>
                             </div>
-                        </a>
+                            <div class="rev_slide">
+                                <a href="javascript:void(0);" class="project-item">
+                                    <div class="img-holder">
+                                        <img src="assets/img/project-slider-3.jpg" class="img-regular">
+                                    </div>
+                                    <div class="tab-slide-texts">
+                                        <h5>Adam Kule</h5>
+                                        <div class="tab-slide-texts-items">
+                                            <div class="tab-slide-texts-item">
+                                                Lokasyon
+                                                <span>İstanbul / Maltepe</span>
+                                            </div>
+                                            <div class="tab-slide-texts-item">
+                                                Proje Alanı
+                                                <span>3000 m2</span>
+                                            </div>
+                                            <div class="tab-slide-texts-item">
+                                                Daire
+                                                <span>254 residence daire</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rev_slide">
+                                <a href="javascript:void(0);" class="project-item">
+                                    <div class="img-holder">
+                                        <img src="assets/img/project-slider-4.jpg" class="img-regular">
+                                    </div>
+                                    <div class="tab-slide-texts">
+                                        <h5>Adam Kule</h5>
+                                        <div class="tab-slide-texts-items">
+                                            <div class="tab-slide-texts-item">
+                                                Lokasyon
+                                                <span>İstanbul / Maltepe</span>
+                                            </div>
+                                            <div class="tab-slide-texts-item">
+                                                Proje Alanı
+                                                <span>3000 m2</span>
+                                            </div>
+                                            <div class="tab-slide-texts-item">
+                                                Daire
+                                                <span>254 residence daire</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="rev_slide">
+                                <a href="javascript:void(0);" class="project-item">
+                                    <div class="img-holder">
+                                        <img src="assets/img/project-slider-5.jpg" class="img-regular">
+                                    </div>
+                                    <div class="tab-slide-texts">
+                                        <h5>Adam Kule</h5>
+                                        <div class="tab-slide-texts-items">
+                                            <div class="tab-slide-texts-item">
+                                                Lokasyon
+                                                <span>İstanbul / Maltepe</span>
+                                            </div>
+                                            <div class="tab-slide-texts-item">
+                                                Proje Alanı
+                                                <span>3000 m2</span>
+                                            </div>
+                                            <div class="tab-slide-texts-item">
+                                                Daire
+                                                <span>254 residence daire</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Project slider example -->
                     </div>
-                    <!-- Item Example -->
-                    <div class="rev_slide">
-                        <a href="javascript:void(0);" class="project-item">
-                            <div class="img-holder">
-                                <img src="assets/img/project-slider-2.jpg" class="img-regular">
+                    <!-- Sayfa yüklendiğinde sadece ilkinde "show" ve "active" class'ları olmalı -->
+                    <div class="tab-pane fade" id="satis-tamam">
+                        <!-- Project slider example -->
+                        <div class="rev_slider">
+                            <!-- Item Example -->
+                            <div class="rev_slide">
+                                <a href="javascript:void(0);" class="project-item">
+                                    <div class="img-holder">
+                                        <img src="assets/img/project-slider-ic-1.jpg" class="img-regular">
+                                    </div>
+                                    <div class="tab-slide-texts">
+                                        <h5>Adam Kule</h5>
+                                        <div class="tab-slide-texts-items">
+                                            <div class="tab-slide-texts-item">
+                                                Lokasyon
+                                                <span>İstanbul / Maltepe</span>
+                                            </div>
+                                            <div class="tab-slide-texts-item">
+                                                Proje Alanı
+                                                <span>3000 m2</span>
+                                            </div>
+                                            <div class="tab-slide-texts-item">
+                                                Daire
+                                                <span>254 residence daire</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="tab-slide-texts">
-                                <h5>Adam Kule</h5>
-                                <div class="tab-slide-texts-items">
-                                    <div class="tab-slide-texts-item">
-                                        Lokasyon
-                                        <span>İstanbul / Maltepe</span>
+                            <!-- Item Example -->
+                            <div class="rev_slide">
+                                <a href="javascript:void(0);" class="project-item">
+                                    <div class="img-holder">
+                                        <img src="assets/img/project-slider-ic-2.jpg" class="img-regular">
                                     </div>
-                                    <div class="tab-slide-texts-item">
-                                        Proje Alanı
-                                        <span>3000 m2</span>
+                                    <div class="tab-slide-texts">
+                                        <h5>Adam Kule</h5>
+                                        <div class="tab-slide-texts-items">
+                                            <div class="tab-slide-texts-item">
+                                                Lokasyon
+                                                <span>İstanbul / Maltepe</span>
+                                            </div>
+                                            <div class="tab-slide-texts-item">
+                                                Proje Alanı
+                                                <span>3000 m2</span>
+                                            </div>
+                                            <div class="tab-slide-texts-item">
+                                                Daire
+                                                <span>254 residence daire</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="tab-slide-texts-item">
-                                        Daire
-                                        <span>254 residence daire</span>
-                                    </div>
-                                </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="rev_slide">
-                        <a href="javascript:void(0);" class="project-item">
-                            <div class="img-holder">
-                                <img src="assets/img/project-slider-3.jpg" class="img-regular">
+                            <div class="rev_slide">
+                                <a href="javascript:void(0);" class="project-item">
+                                    <div class="img-holder">
+                                        <img src="assets/img/project-slider-ic-3.jpg" class="img-regular">
+                                    </div>
+                                    <div class="tab-slide-texts">
+                                        <h5>Adam Kule</h5>
+                                        <div class="tab-slide-texts-items">
+                                            <div class="tab-slide-texts-item">
+                                                Lokasyon
+                                                <span>İstanbul / Maltepe</span>
+                                            </div>
+                                            <div class="tab-slide-texts-item">
+                                                Proje Alanı
+                                                <span>3000 m2</span>
+                                            </div>
+                                            <div class="tab-slide-texts-item">
+                                                Daire
+                                                <span>254 residence daire</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="tab-slide-texts">
-                                <h5>Adam Kule</h5>
-                                <div class="tab-slide-texts-items">
-                                    <div class="tab-slide-texts-item">
-                                        Lokasyon
-                                        <span>İstanbul / Maltepe</span>
+                            <div class="rev_slide">
+                                <a href="javascript:void(0);" class="project-item">
+                                    <div class="img-holder">
+                                        <img src="assets/img/project-slider-ic-4.jpg" class="img-regular">
                                     </div>
-                                    <div class="tab-slide-texts-item">
-                                        Proje Alanı
-                                        <span>3000 m2</span>
+                                    <div class="tab-slide-texts">
+                                        <h5>Adam Kule</h5>
+                                        <div class="tab-slide-texts-items">
+                                            <div class="tab-slide-texts-item">
+                                                Lokasyon
+                                                <span>İstanbul / Maltepe</span>
+                                            </div>
+                                            <div class="tab-slide-texts-item">
+                                                Proje Alanı
+                                                <span>3000 m2</span>
+                                            </div>
+                                            <div class="tab-slide-texts-item">
+                                                Daire
+                                                <span>254 residence daire</span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="tab-slide-texts-item">
-                                        Daire
-                                        <span>254 residence daire</span>
-                                    </div>
-                                </div>
+                                </a>
                             </div>
-                        </a>
-                    </div>
-                    <div class="rev_slide">
-                        <a href="javascript:void(0);" class="project-item">
-                            <div class="img-holder">
-                                <img src="assets/img/project-slider-4.jpg" class="img-regular">
+                            <div class="rev_slide">
+                                <a href="javascript:void(0);" class="project-item">
+                                    <div class="img-holder">
+                                        <img src="assets/img/project-slider-ic-5.jpg" class="img-regular">
+                                    </div>
+                                    <div class="tab-slide-texts">
+                                        <h5>Adam Kule</h5>
+                                        <div class="tab-slide-texts-items">
+                                            <div class="tab-slide-texts-item">
+                                                Lokasyon
+                                                <span>İstanbul / Maltepe</span>
+                                            </div>
+                                            <div class="tab-slide-texts-item">
+                                                Proje Alanı
+                                                <span>3000 m2</span>
+                                            </div>
+                                            <div class="tab-slide-texts-item">
+                                                Daire
+                                                <span>254 residence daire</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="tab-slide-texts">
-                                <h5>Adam Kule</h5>
-                                <div class="tab-slide-texts-items">
-                                    <div class="tab-slide-texts-item">
-                                        Lokasyon
-                                        <span>İstanbul / Maltepe</span>
-                                    </div>
-                                    <div class="tab-slide-texts-item">
-                                        Proje Alanı
-                                        <span>3000 m2</span>
-                                    </div>
-                                    <div class="tab-slide-texts-item">
-                                        Daire
-                                        <span>254 residence daire</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="rev_slide">
-                        <a href="javascript:void(0);" class="project-item">
-                            <div class="img-holder">
-                                <img src="assets/img/project-slider-5.jpg" class="img-regular">
-                            </div>
-                            <div class="tab-slide-texts">
-                                <h5>Adam Kule</h5>
-                                <div class="tab-slide-texts-items">
-                                    <div class="tab-slide-texts-item">
-                                        Lokasyon
-                                        <span>İstanbul / Maltepe</span>
-                                    </div>
-                                    <div class="tab-slide-texts-item">
-                                        Proje Alanı
-                                        <span>3000 m2</span>
-                                    </div>
-                                    <div class="tab-slide-texts-item">
-                                        Daire
-                                        <span>254 residence daire</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
+                        </div>
+                        <!-- Project slider example -->
                     </div>
                 </div>
             </div>
@@ -396,69 +518,28 @@
     </section>
     <!-- Projects Slider -->
 
-    <!-- Video -->
-    <section id="video" class="position-relative">
-        <div class="container h-100">
-            <div class="video-holder position-relative h-100">
-                <video id="myVideo" class="img-regular" height="100%" preload="none" loading="lazy" playsinline=""
-                    poster="./assets/img/project-slider-1.jpg" src="./assets/img/video/yuruyus.mp4"></video>
-                <a href="javascript:void(0);" id="play-video" class="position-absolute show"><img
-                        src="./assets/img/icons/play-btn.png" alt=""></a>
-                <a href="javascript:void(0);" id="pause-video" class="position-absolute hide"></a>
-            </div>
+    <!-- Video section -->
+    <section id="video">
+        <div class="bg-holder container h-100">
+            <iframe width="100%" height="100%"
+                src="https://www.youtube.com/embed/Ktgh3pdYGTI?si=0JSGSqttRB0bxSos&autoplay=1&controls=0&mute=1&modestbranding=1&loop=1&playlist=Ktgh3pdYGTI"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
     </section>
-    <!-- Video -->
+    <!-- Video section -->
 
-    <!-- Gallery -->
-    <section id="gallery">
-        <div class="container">
-            <div class="header-container">
-                <div class="header col-lg-5 d-flex flex-column align-items-start">
-                    <h3 class="header--subtitle">
-                        Galeri
-                    </h3>
-                    <h1 class="header--title">
-                        Sizden Gelen <br> <span>Fotoğraflar</span>
-                    </h1>
-                </div>
-                <a href="javascript:void(0);" class="green-btn animation-btn green-animation">
-                    <p class="header-white mb-0 text-white">Galeri</p>
-                    <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy" alt="arrow right circle icon">
-                </a>
-            </div>
-        </div>
-        <div class="glide gallery-slider" id="gallery-slide">
-            <div class="glide__track" data-glide-el="track">
-                <ul class="glide__slides">
-                    <li class="glide__slide">
-                        <img src="../assets/img/project-slider-1.jpg" alt="" />
-                    </li>
-                    <li class="glide__slide">
-                        <img src="./assets/img/project-slider-2.jpg" alt="" />
-                    </li>
-                    <li class="glide__slide">
-                        <img src="./assets/img/project-slider-3.jpg" alt="" />
-                    </li>
-                    <li class="glide__slide">
-                        <img src="./assets/img/project-slider-4.jpg" alt="" />
-                    </li>
-                    <li class="glide__slide">
-                        <img src="./assets/img/project-slider-5.jpg" alt="" />
-                    </li>
-                </ul>
-                <div class="glide__arrows d-flex justify-content-center align-items-center" data-glide-el="controls">
-                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">
-                        <img src="./assets/img/icons/main-slider-left.svg" alt="arrow" />
-                    </button>
-                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">
-                        <img src="./assets/img/icons/main-slider-right.svg" alt="arrow" />
-                    </button>
-                </div>
-            </div>
+    <!-- Video Alternative -->
+    <section class="section-video">
+        <div class="video-holder">
+            <video id="my_video" class="img-regular" preload="none" loading="lazy" playsinline=""
+                poster="./assets/img/project-slider-1.jpg" src="./assets/img/video/yuruyus.mp4"></video>
+            <a href="javascript:void(0);" id="play_video"><img src="./assets/img/icons/play-btn.png" alt=""></a>
+            <a href="javascript:void(0);" id="pause_video"></a>
         </div>
     </section>
-    <!-- Gallery -->
+    <!-- Video -->
 
     <!-- Map -->
     <section id="map">
@@ -478,7 +559,7 @@
                         soluta. Provident.</p>
                     <a target="_blank"
                         href="https://www.google.com/maps/dir//Ak%C3%A7ay,+Sapanca+Hayat+A%C4%9Fac%C4%B1+Bungalov,+Sapanca,+Orta+6.Sk+No:10,+54600+Sapanca%2FSakarya/@40.6708599,30.3305649,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x14ccaf520c372197:0x51704693ce7449ea!2m2!1d30.3331278!2d40.6708424!3e0?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"
-                        class="green-btn animation-btn green-animation">
+                        class="green-button animation-button green-animation">
                         <p class="header-white mb-0 text-white">Yol Tarifi Al</p>
                         <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy"
                             alt="arrow right circle icon">
@@ -494,64 +575,6 @@
         </div>
     </section>
     <!-- Map -->
-
-    <!-- FAQ -->
-    <section id="faq">
-        <div class="container">
-            <div class="header-container">
-                <div class="header">
-                    <h1 class="header--title">
-                        Sıkça Sorulan <span>Sorular</span>
-                    </h1>
-                </div>
-            </div>
-            <div class="accordion accordion-flush" id="accordionFlushExample">
-                <div class="accordion-item" data-animate-way="top-bottom">
-                    <h2 class="accordion-header" id="flush-acc-1">
-                        <a href="javascript:void(0);" class="accordion-button d-flex align-items-center justify-content-between collapsed" type="button" data-toggle="collapse" data-target="#acc-1" aria-expanded="false" aria-controls="acc-1">
-                            <p class="title mb-0">Lorem, ipsum dolor.</p>
-                            <div class="right d-flex align-items-center justify-content-center"></div>
-                        </a>
-                    </h2>
-                    <div id="acc-1" class="accordion-collapse collapse"
-                        aria-labelledby="flush-acc-1" data-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus accusantium eum similique consequuntur minus saepe magnam quae reiciendis facere laborum.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item" data-animate-way="top-bottom">
-                    <h2 class="accordion-header" id="flush-acc-2">
-                        <a href="javascript:void(0);" class="accordion-button d-flex align-items-center justify-content-between collapsed" type="button" data-toggle="collapse" data-target="#acc-2" aria-expanded="false" aria-controls="acc-2">
-                            <p class="title mb-0">Lorem, ipsum dolor.</p>
-                            <div class="right d-flex align-items-center justify-content-center"></div>
-                        </a>
-                    </h2>
-                    <div id="acc-2" class="accordion-collapse collapse"
-                        aria-labelledby="flush-acc-2" data-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, ab?</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="accordion-item" data-animate-way="top-bottom">
-                    <h2 class="accordion-header" id="flush-acc-3">
-                        <a href="javascript:void(0);" class="accordion-button d-flex align-items-center justify-content-between collapsed" type="button" data-toggle="collapse" data-target="#acc-3" aria-expanded="false" aria-controls="acc-3">
-                            <p class="title mb-0">Lorem, ipsum dolor.</p>
-                            <div class="right d-flex align-items-center justify-content-center"></div>
-                        </a>
-                    </h2>
-                    <div id="acc-3" class="accordion-collapse collapse"
-                        aria-labelledby="flush-acc-3" data-parent="#accordionFlushExample">
-                        <div class="accordion-body">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti impedit laboriosam repellat odio cumque in qui, adipisci quos iusto aut quo dolorum illo tempora possimus enim. Exercitationem saepe doloremque, nostrum soluta esse vitae veritatis quis sed reprehenderit praesentium, illum perspiciatis id molestias suscipit repudiandae amet dolore. Iusto a repellendus dignissimos.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- FAQ -->
 
     <!-- Customers -->
     <section id="customers">
@@ -711,17 +734,17 @@
     <section class="d-none flex-column align-items-center justify-content-center"
         style="background-color: #1E3100; padding: 200px 0;">
 
-        <a href="javascript:void(0);" class="green-btn animation-btn green-animation">
+        <a href="javascript:void(0);" class="green-button animation-button green-animation">
             <p class="header-white mb-0 text-white">Biz Kimiz</p><img src="./assets/img/icons/arrow-right-circle.svg"
                 loading="lazy" alt="arrow right circle icon">
         </a>
 
-        <a href="javascript:void(0);" class="green-btn-marker animation-btn green-animation">
+        <a href="javascript:void(0);" class="green-button-marker animation-button green-animation">
             <img src="./assets/img/icons/white-marker.svg" loading="lazy" alt="white marker">
             <p class="desc-light-white mb-0 text-white">İstanbul</p>
         </a>
 
-        <a href="javascript:void(0);" class="green-btn-regular animation-btn green-animation">
+        <a href="javascript:void(0);" class="green-button-regular animation-button green-animation">
             <p class="desc-white mb-0 text-white">İncele</p>
         </a>
 
@@ -750,18 +773,6 @@
 
     </section>
     <!-- Buttons -->
-
-    <!-- Video Alternative Iframe -->
-    <section id="video-iframe" class="d-none">
-        <div class="bg-holder container h-100">
-            <iframe width="100%" height="100%"
-                src="https://www.youtube.com/embed/Ktgh3pdYGTI?si=0JSGSqttRB0bxSos&autoplay=1&controls=0&mute=1&modestbranding=1&loop=1&playlist=Ktgh3pdYGTI"
-                title="YouTube video player" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
-    </section>
-    <!-- Video Alternative Iframe -->
 
     <script src=" https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
     <script src="./assets/js/dev/home.js"></script>
