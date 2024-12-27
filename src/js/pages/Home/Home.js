@@ -33,8 +33,8 @@ export default class HomePage {
     }
 
     this.headerSlider();
-    this.customersSlider();
     this.videoClickEvent();
+    this.customersSlider();
   }
 
   headerSlider() {
@@ -134,6 +134,7 @@ export default class HomePage {
     const video = document.getElementById("my_video");
     const playButton = document.getElementById("play_video");
     const pauseButton = document.getElementById("pause_video");
+    const videoSection = document.getElementById("video");
 
     if (!video || !playButton || !pauseButton) return;
 
@@ -146,11 +147,13 @@ export default class HomePage {
 
     const playVideo = () => {
       toggleButtonVisibility(pauseButton, playButton);
+      videoSection.classList.add("video-playing");
       video.play();
     };
 
     const pauseVideo = () => {
       toggleButtonVisibility(playButton, pauseButton);
+      videoSection.classList.remove("video-playing");
       video.pause();
     };
 
@@ -236,7 +239,15 @@ export default class HomePage {
       breakpoints: {
         1200: {
           perView: 1,
-          peek: 35,
+          peek: 200,
+        },
+        993: {
+          perView: 1,
+          peek: 100,
+        },
+        767: {
+          perView: 1,
+          peek: 50,
         },
       },
     };
