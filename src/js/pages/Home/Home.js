@@ -6,12 +6,14 @@ import Global from '../../base/_global';
 // Modules Import
 import Counter from '../../base/modules/_counter';
 import checkIn from '../../base/modules/_checkIn';
+import Form from '../../base/shared/_form';
 
 export default class HomePage {
   constructor() {
 
     new Global();
     new checkIn();
+    new Form();
 
     window.animateCounter = Counter;
 
@@ -134,7 +136,6 @@ export default class HomePage {
     const video = document.getElementById("my_video");
     const playButton = document.getElementById("play_video");
     const pauseButton = document.getElementById("pause_video");
-    const videoSection = document.getElementById("video");
 
     if (!video || !playButton || !pauseButton) return;
 
@@ -147,13 +148,11 @@ export default class HomePage {
 
     const playVideo = () => {
       toggleButtonVisibility(pauseButton, playButton);
-      videoSection.classList.add("video-playing");
       video.play();
     };
 
     const pauseVideo = () => {
       toggleButtonVisibility(playButton, pauseButton);
-      videoSection.classList.remove("video-playing");
       video.pause();
     };
 

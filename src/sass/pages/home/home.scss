@@ -1,5 +1,6 @@
 // Global
 @import "../../base/global";
+@import "../../base/shared/form";
 
 // Glide JS
 @import "../../base/modules/glide/glide-core";
@@ -125,6 +126,8 @@
             background: transparent;
             border: 0;
             outline: 0;
+            padding: 0 0 0 10px;
+            height: auto;
             color: white;
             box-shadow: none;
             cursor: pointer;
@@ -205,6 +208,10 @@
               margin: 15px 0;
             }
           }
+
+          @media screen and (max-width: 1200px) {
+            gap: 0px;
+          }
         }
 
         &.count-items {
@@ -236,10 +243,12 @@
             color: $white;
             gap: 10px;
           }
+          @media screen and (max-width: 1200px) {
+            margin-top: 15px;
+          }
         }
 
-        p,
-        a {
+        p, a {
           margin: 0;
         }
 
@@ -290,7 +299,7 @@
   }
 
   .right {
-    .right-top {
+    .right-img {
       position: relative;
       height: 560px;
       width: 100%;
@@ -323,26 +332,11 @@
         border-color: #fff;
       }
     }
-
-    .right-bottom {
-      position: relative;
-      z-index: 1;
-      margin-top: -140px;
-      width: 280px;
-      height: 280px;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 10px;
-      }
-    }
   }
 
   @media screen and (max-width: 1800px) {
     .right {
-      .right-top {
+      .right-img {
         height: 440px;
       }
 
@@ -356,7 +350,7 @@
 
   @media screen and (max-width: 1500px) {
     .right {
-      .right-top {
+      .right-img {
         height: 400px;
       }
     }
@@ -365,36 +359,14 @@
   @media screen and (max-width: 1200px) {
     padding: 41px 0 80px;
     overflow: hidden;
-
-    .bg-gray-logo-holder {
-      margin-top: 0px;
-      right: unset;
-      left: 0;
-      top: 40px;
-    }
-
-    .bg-gray-map-holder {
-      left: 0px;
-      top: unset;
-      bottom: -20px;
-      width: 540px;
-    }
-
-    .top {
-      padding-top: 40px;
-    }
-
-    .bottom {
-      margin-top: 40px;
-
-      .right {
-        min-height: unset;
-        height: 342px;
+    .header-container{
+      .header--title {
+        margin-bottom: 30px;
       }
-
-      .left {
-        padding: 0 !important;
-        margin-top: 40px;
+    }
+    .right{
+      .right-img{
+        margin-bottom: 40px;
       }
     }
   }
@@ -671,20 +643,20 @@
 
     .slick-snext {
       perspective: 1000px;
-      transform: translate3d(32%, -20px, -15px);
+      transform: translate3d(32%, 0px, -15px);
     }
 
     .slick-snext2 {
       perspective: 1000px;
-      transform: translate3d(60%, -20px, -45px);
+      transform: translate3d(60%, 0px, -45px);
     }
 
     .slick-sprev {
-      transform: translate3d(-32%, -20px, -15px);
+      transform: translate3d(-32%, 0px, -15px);
     }
 
     .slick-sprev2 {
-      transform: translate3d(-60%, -20px, -45px);
+      transform: translate3d(-60%, 0px, -45px);
     }
 
     .site-button {
@@ -704,59 +676,9 @@
   max-height: 800px;
   margin: 60px 0;
 
-  &.video-playing {
-    .video-holder {
-      .video-content {
-        opacity: 0;
-        pointer-events: none;
-      }
-    }
-  }
-
   .video-holder {
     height: 100%;
     position: relative;
-    .video-content {
-      opacity: 1;
-      pointer-events: unset;
-      transition: opacity 0.4s ease;
-      position: absolute;
-      left: 40px;
-      top: 40px;
-      padding: 50px 50px 50px 60px;
-      background-color: hsla(0, 0%, 100%, 0.1);
-      backdrop-filter: blur(8px) brightness(1.15);
-      max-width: 400px;
-      color: $white;
-      text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
-
-      h1 {
-        font-size: 35px;
-        margin-bottom: 15px;
-      }
-      p {
-        margin: 0;
-      }
-
-      &::before {
-        content: "";
-        position: absolute;
-        left: 20px;
-        top: 20px;
-        width: 15px;
-        height: 15px;
-        background-color: $main-color;
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        top: 35px;
-        left: 35px;
-        width: 10px;
-        height: 10px;
-        background-color: $main-color;
-      }
-    }
     #play_video {
       position: absolute;
       left: 50%;
@@ -829,6 +751,14 @@
       img {
         padding: 12px;
       }
+    }
+  }
+  @media screen and (max-width: 1200px) {
+    height: 232px;
+    margin: 40px 0;
+    padding: 0;
+    .container{
+      padding: 0;
     }
   }
 }
@@ -1034,15 +964,12 @@
 // Map
 #map {
   .header-container {
-    margin-bottom: 0;
-
-    .header--title {
-      margin-bottom: 30px;
+    margin-bottom: 40px;
+  
+    .header--title{
+      margin-bottom: 0;
     }
 
-    .green-button {
-      margin-top: 30px;
-    }
   }
 
   .right {
@@ -1054,12 +981,21 @@
       height: 420px;
     }
   }
+  @media screen and (max-width: 1200px) {
+    .header-container{
+      margin-bottom: 20px;
+    }
+    .right{
+      height: 360px;
+      margin-bottom: 40px;
+    }
+  }
 }
 
 // faq
 #faq {
   .header-container {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
   }
 
   .accordion-item {
@@ -1080,7 +1016,7 @@
   }
 
   .accordion-button {
-    padding: 20px 10px 20px 0;
+    padding: 20px 0;
 
     &:hover {
       .title {
@@ -1103,6 +1039,8 @@
     }
 
     .right {
+      position: relative;
+      width: 16px;
       margin-left: 20px;
 
       &::before,
@@ -1140,8 +1078,9 @@
   }
 
   @media screen and (max-width: 1200px) {
-    padding: 80px 0;
-
+    .header-container{
+      margin-bottom: 0;
+    }
     .h2 {
       font-size: 20px;
       margin-bottom: 30px;
@@ -1153,6 +1092,12 @@
 
       .h3 {
         color: $main-color;
+      }
+
+      .right{
+        &::before,&::after {
+          right: 24px;
+        }
       }
 
       &[aria-expanded="true"] {
@@ -1275,7 +1220,11 @@
   }
 
   @media screen and (max-width: 993px) {
-    padding-top: 80px;
+    padding: 60px 0;
+
+    .header-container {
+      margin-bottom: 10px;
+    }
 
     .bottom-container {
       padding: 0 !important;
@@ -1289,6 +1238,7 @@
 
       .customers-slider-item {
         padding: 85px 42px 65px 45px;
+        height: 310px;
 
         img {
           top: -84px;

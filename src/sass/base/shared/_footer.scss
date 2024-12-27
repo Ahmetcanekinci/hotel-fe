@@ -41,7 +41,6 @@ footer {
 		.top {
 			padding-bottom: 40px;
 			.left {
-				height: 100px;
 				margin-bottom: 20px;
 			}
 			.right {
@@ -52,11 +51,9 @@ footer {
             }
 		}
 		.bottom {
-			flex-direction: column-reverse;
 			a {
 				margin-right: 0px !important;
 				margin-bottom: 16px !important;
-				text-align: center;
 			}
 		}
 	}

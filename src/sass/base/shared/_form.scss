@@ -1,0 +1,204 @@
+.contact-form {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+
+    &-content {
+        position: relative;
+        max-width: 700px;
+        width: 100%;
+
+        .form-control {
+            border: none;
+            background: unset;
+            border-bottom: 0;
+            border-radius: 0;
+            font-size: 18px;
+            height: unset;
+            font-family: "Inter";
+            color: #7F7F7F !important;
+            outline: 0;
+            box-shadow: 0 0 0 0rem #fff;
+
+
+            &::placeholder {
+                color: #7F7F7F !important;
+                letter-spacing: 1.2px;
+                text-transform: uppercase;
+            }
+
+            @media only screen and (max-width: 1200px) {
+                font-size: 14px;
+            }
+        }
+
+        .form-group {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            border-radius: 0px;
+            color: #FFFFFF !important;
+            display: flex;
+            flex-direction: column;
+            background-color: transparent;
+            box-shadow: none;
+            -webkit-appearance: none !important;
+            -moz-appearance: none !important;
+            appearance: none !important;
+
+            .desc-gray-light {
+                margin-bottom: 10px;
+                color: #8792CC;
+            }
+
+            small {
+                display: none;
+                color: #f44336;
+                margin-top: 6px;
+                font-size: 12px;
+
+                &.active {
+                    display: flex;
+                }
+            }
+
+            input,
+            textarea {
+                border-bottom: 1px solid #B3B99E;
+                padding: 40px 0 7px 0;
+                height: unset;
+            }
+
+            &:focus {
+                border-color: unset !important;
+                box-shadow: none;
+                border: none;
+            }
+        }
+
+        .form-checks {
+            .form-check {
+                padding: 0;
+                margin: 26px 0;
+                display: flex;
+
+                .checkbox {
+                    margin: 0;
+
+                    input {
+                        -webkit-appearance: none;
+                        appearance: none;
+                        background-color: var(--form-background);
+                        margin: 0;
+                        background-color: #B3B99E;
+                        font: inherit;
+                        color: $white;
+                        min-width: 19px;
+                        min-height: 19px;
+                        max-height: 19px;
+                        max-width: 19px;
+                        border-radius: 0.15em;
+                        margin-top: 3px;
+
+                        display: grid;
+                        place-content: center;
+
+                        &::before {
+                            content: "";
+                            width: 0.65em;
+                            height: 0.65em;
+                            clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+                            transform: scale(0);
+                            transform-origin: bottom left;
+                            transition: 120ms transform ease-in-out;
+                            box-shadow: inset 1em 1em var(--form-control-color);
+                            /* Windows High Contrast Mode */
+                            background-color: $white;
+                        }
+
+                        &:checked {
+                            &::before {
+                                transform: scale(1);
+                            }
+                        }
+                    }
+                }
+
+                label {
+                    display: flex;
+                    align-items: start;
+                    gap: 10px;
+                    color: #7F7F7F;
+                    font-family: "Inter";
+                    font-size: 14px;
+                }
+            }
+        }
+
+        small {
+            display: none;
+            color: #f44336;
+            margin-top: 6px;
+            font-size: 12px;
+
+            &.active {
+                display: flex;
+            }
+        }
+
+        .form-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+
+            #formButton {
+                height: 40px;
+                color: #fff;
+            }
+
+            @media only screen and (max-width: 1200px) {
+                flex-direction: column;
+                align-items: start;
+                gap: 10px;
+            }
+        }
+    }
+
+    &-text {
+        max-width: 600px;
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+
+            &--title {
+                margin-bottom: 30px;
+            }
+
+            .desc {
+                margin-bottom: 30px;
+
+                @media only screen and (max-width: 1200px) {
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    /* Number of lines */
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                }
+
+
+            }
+
+            @media only screen and (max-width: 1200px) {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1200px) {
+        flex-direction: column;
+    }
+}
