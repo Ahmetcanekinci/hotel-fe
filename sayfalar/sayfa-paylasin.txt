@@ -1,0 +1,38 @@
+-- CYCLE 1 - ALT SAYFALAR --
+
+-- AHMET --
+
+FAQ
+GALERİ
+HAKKIMIZDA
+PROJELER
+
+-- KAAN --
+
+İLETİŞİM
+KVKK
+PROJE DETAY
+
+DEADLINE: 12.01
+
+--------------------------------------
+
+-- CYCLE 2 - UAT & UI & UX TESTLERİ --
+
+NOT: SAYFALARIN TESTİNİ AKSİYON ALAN DEĞİL DİĞERİ YAPACAK*
+
+TESTLERİN BİTİMİ: 15.01
+
+BUG FIXS + NAVBAR + HAMBURGER-MENÜ : 18.01
+
+DEADLINE: 19.01
+
+-----------------------------
+
+-- CYCLE 3 - TAKVİM EVENTİ --
+
+TAKVİM EVENTİ - KAAN - AHMET
+
+RANDEVU SATIŞ - KAAN - AHMET
+
+DEADLINE: 02.02
