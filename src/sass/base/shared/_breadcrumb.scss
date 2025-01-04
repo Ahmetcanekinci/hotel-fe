@@ -1,0 +1,19 @@
+#breadcrumb{
+    background-color: #169F5F;
+    padding: 8px 0;
+    a{
+        font-size: 14px;
+        color: #ffffff90;
+        &:last-child{
+            color: #FFFFFF;
+        }
+    }
+    span{
+        font-size: 14px;
+        margin: 0 10px;
+        color: #ffffff90;
+    }
+    @media screen and (max-width: 993px) {
+        display: none;
+    }
+}

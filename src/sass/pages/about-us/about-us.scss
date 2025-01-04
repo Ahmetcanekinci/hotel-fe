@@ -1,0 +1,309 @@
+// Global
+@import "../../base/global";
+
+// Glide JS
+@import "../../base/modules/glide/glide-core";
+@import "../../base/modules/glide/glide-theme";
+
+.navbar{
+  position: relative;
+  background-color: $main-color;
+}
+
+#detail-header{
+  height: 50vh;
+  padding: 0;
+  &::before{
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 60%);
+    z-index: 1;
+  }
+  .container{
+    position: relative;
+    z-index: 1;
+    .title{
+      font-size: 40px;
+      color: #FFFFFF;
+      text-shadow: 3px 3px 6px #00000080;
+    }
+  }
+  @media screen and (max-width: 993px) {
+    height: 283px;
+    &::before {
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+    }
+    .container{
+      .title{
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+// about-us
+#about-us {
+  position: relative;
+  padding: 50px 0;
+
+  .header-container {
+    margin-bottom: 0;
+
+    .header--title {
+      margin-bottom: 30px;
+    }
+
+    .green-button {
+      margin-top: 30px;
+    }
+  }
+
+  .right {
+    .right-img {
+      position: relative;
+      height: 560px;
+      width: 100%;
+
+      img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+      }
+
+      &::before {
+        content: "";
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        border-width: 40px 0 0 10px;
+        border-style: solid;
+        border-color: #fff;
+      }
+      &::after {
+        content: "";
+        width: 50%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-width: 0 10px 40px 0;
+        border-style: solid;
+        border-color: #fff;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1800px) {
+    .right {
+      .right-img {
+        height: 440px;
+      }
+
+      .right-bottom {
+        margin-top: -110px;
+        width: 220px;
+        height: 220px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1500px) {
+    .right {
+      .right-img {
+        height: 400px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    padding: 41px 0 80px;
+    overflow: hidden;
+    .header-container{
+      .header--title {
+        margin-bottom: 30px;
+      }
+    }
+    .right{
+      .right-img{
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
+
+// milestones
+#milestones{
+    padding: 60px 0;
+    background-color: #F7F7F8;
+    .header-container{
+      margin-bottom: 0;
+      .header {
+        margin-bottom: 0;
+        &--title{
+          margin-bottom: 0;
+        }
+      }
+    }
+    .bottom{
+        margin-top: 46px;
+        #milestone-date-slide{
+            ul{
+                padding-top: 24px;
+            }
+            .glide__track{
+                height: 93px
+            }
+            .glide__slide{
+                .date{
+                    p{
+                        position: relative;
+                        width: fit-content;
+                        display: flex;
+                        justify-content: center;
+                        color: #222222;
+                        transition: all .3s linear;
+                        &::before{
+                            content: '';
+                            position: absolute;
+                            top: -17px;
+                            width: 12px;
+                            height: 12px;
+                            border-radius: 50%;
+                            background-color: #222222;
+                            transition: all .3s linear;
+                        }
+                    }
+                }
+                &--active{
+                    .date{
+                        p{
+                            font-size: 28px;
+                            line-height: 37px;
+                            color: $main-color;
+                            &::before{
+                                top: -24px;
+                                width: 24px;
+                                height: 24px;
+                                background-color: $main-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        #milestone-slide{
+            margin-top: 55px;
+            .milestones-item{
+                img{
+                    height: 385px !important;
+                }
+            }
+            .date-section{
+                padding-top: 40px;
+                margin-left: 60px;
+                width: 41.507%;
+                .date{
+                    font-size: 80px;
+                    line-height: 103px;
+                    letter-spacing: -.30px;
+                    margin-bottom: 20px;
+                    color: #222222;
+                    font-weight: 500;
+                }
+                .strong-text{
+                    color: #707070;
+                    font-weight: 500;
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                }
+            }
+            .glide__arrows{
+                padding-top: 0;
+                margin-top: -110px;
+                button{
+                  padding: 0;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 35px;
+                  height: 35px;
+                  border-radius: 50%;
+                  background-color: $main-color;
+                  img {
+                    filter: brightness(0) invert(1);
+                  }
+                  &.glide__arrow--left{
+                      margin-right: 33px;
+                  }
+                }
+            }
+        }
+    }
+    .line{
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background-color: #707070;
+        left: 0;
+        margin-top: 12px;
+    }
+    @media screen and (max-width: 1200px){
+      padding: 40px 0;
+      .bottom{
+          #milestone-date-slide{
+              .glide__slide{
+                  .date{
+                      display: flex;
+                      justify-content: center;
+                  }
+                  &--active{
+                      .date{
+                          p{
+                              font-size: 18px;
+                              line-height: 23px;
+                          }
+                      }
+                  }
+              }
+          }
+          #milestone-slide{
+              margin-top: 30px;
+              .milestones-item{
+                  flex-direction: column;
+                  img{
+                      height: 228px !important;
+                  }
+              }
+              .date-section{
+                  padding-top: 20px;
+                  margin-left: 0px;
+                  width: 100%;
+                  .date{
+                      font-size: 48px;
+                      line-height: 62px;
+                  }
+                  .strong-text{
+                      line-height: 32px;
+                  }
+              }
+              .glide__arrows{
+                  margin-top: 0;
+                  padding-top: 4px;
+                  button{
+                      &.glide__arrow--left{
+                          margin-right: 33px;
+                      }
+                  }
+              }
+          }
+      }
+    }
+}

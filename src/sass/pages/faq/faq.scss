@@ -1,0 +1,165 @@
+// Global
+@import "../../base/global";
+
+.navbar{
+  position: relative;
+  background-color: $main-color;
+}
+
+#detail-header{
+  height: 50vh;
+  padding: 0;
+  &::before{
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0) 60%);
+    z-index: 1;
+  }
+  .container{
+    position: relative;
+    z-index: 1;
+    .title{
+      font-size: 40px;
+      color: #FFFFFF;
+      text-shadow: 3px 3px 6px #00000080;
+    }
+  }
+  @media screen and (max-width: 993px) {
+    height: 283px;
+    &::before {
+      background: linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 70%);
+    }
+    .container{
+      .title{
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+// faq
+#faq {
+  padding: 40px 0;
+  .header-container {
+    margin-bottom: 20px;
+  }
+
+  .accordion-item {
+    border-bottom: 1px solid #dee2f7;
+
+    &:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  .accordion-body {
+    margin-bottom: 20px;
+  }
+
+  .accordion-header {
+    margin-bottom: 0;
+  }
+
+  .accordion-button {
+    padding: 20px 0;
+
+    &:hover {
+      .title {
+        color: $main-color;
+      }
+
+      .right {
+        &::before,
+        &::after {
+          background-color: $main-color;
+        }
+      }
+    }
+
+    .title {
+      font-size: 21px;
+      line-height: 24px;
+      transition: all 0.4s;
+      color: #1d1d1d;
+    }
+
+    .right {
+      position: relative;
+      width: 16px;
+      margin-left: 20px;
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 16px;
+        height: 4px;
+        background-color: #000000;
+        transition: all 0.4s;
+      }
+
+      &::after {
+        transform: rotate(90deg);
+      }
+    }
+
+    &[aria-expanded="true"] {
+      .title {
+        font-weight: bold;
+        color: $main-color;
+      }
+
+      .right {
+        &::before,
+        &::after {
+          background-color: $main-color;
+        }
+
+        &::after {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .header-container{
+      margin-bottom: 0;
+    }
+    .h2 {
+      font-size: 20px;
+      margin-bottom: 30px;
+      font-family: "Neurial Grotesk Regular";
+    }
+
+    .accordion-button {
+      padding: 20px 0 20px 0;
+
+      .h3 {
+        color: $main-color;
+      }
+
+      .right{
+        &::before,&::after {
+          right: 24px;
+        }
+      }
+
+      &[aria-expanded="true"] {
+        p {
+          font-weight: bold;
+        }
+      }
+    }
+
+    .accordion-body {
+      margin-bottom: 65px;
+    }
+  }
+}
