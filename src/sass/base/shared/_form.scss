@@ -90,7 +90,7 @@
                         appearance: none;
                         background-color: var(--form-background);
                         margin: 0;
-                        background-color: #B3B99E;
+                        border: 1px solid #B3B99E;
                         font: inherit;
                         color: $white;
                         min-width: 19px;
@@ -99,6 +99,7 @@
                         max-width: 19px;
                         border-radius: 0.15em;
                         margin-top: 3px;
+                        transition: all .3s;
 
                         display: grid;
                         place-content: center;
@@ -117,6 +118,8 @@
                         }
 
                         &:checked {
+                            background-color: #B3B99E;
+
                             &::before {
                                 transform: scale(1);
                             }
