@@ -1,0 +1,261 @@
+// Global
+@import "../../base/global";
+
+// Glide JS
+@import "../../base/modules/glide/glide-core";
+@import "../../base/modules/glide/glide-theme";
+
+.navbar{
+  position: relative;
+  background-color: $main-color;
+}
+
+#culture-tab{
+    .availability{
+        min-height: 400px;
+        margin: 50px 0;
+        .availability-slider{
+            position: relative;
+            .glide__slide{
+                img{
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+            }
+            .glide__arrows{
+                position: absolute;
+                justify-content: space-between;
+                top: calc(50% - 15px);
+                width: 100%;
+                height: 0;
+                padding: 0 40px !important;
+                .glide__arrow{
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 100%;
+                    background-color: rgba(255, 255, 255, 0.40);
+                    backdrop-filter: blur(7px) brightness(1.15);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    img{
+                        width: 6.5px;
+                        height: 11px;
+                    }
+                }
+            }
+            .glide__bullets{
+                width: 100%;
+                bottom: 24px !important;
+                position: absolute;
+                height: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .glide__bullet{
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 50%;
+                    margin-right: 5px;
+                    background-color: #FFF;
+                    &:last-child{
+                        margin-right: 0;
+                    }
+                    &--active{
+                        background-color: $main-color;
+                    }
+                }
+            }
+            .hotel-name{
+                left: -1px;
+                bottom: -1px;
+                height: 62px;
+                padding: 0 28px 0 23px;
+                background-color: rgba(255, 255, 255, 0.40);
+                backdrop-filter: blur(7px) brightness(1.15);
+                border-radius: 10px;
+                transition: all .4s linear;
+                p{
+                    font-size: 20px;
+                    line-height: 27px;
+                    margin-bottom: 0;
+                }
+                .hotel-description{
+                    font-size: 14px;
+                    line-height: 21px;
+                }
+            }
+        }
+        .right{
+            justify-content: space-between;
+            .availability-icons{
+                margin-bottom: 20px;
+                img{
+                    height: 30px;
+                }
+            }
+            .top{
+                margin-bottom: 40px;
+                .purple-text{
+                    margin-bottom: 14px;
+                    color: $main-color;
+                }
+                .check-list{
+                    margin-bottom: 14px;
+                    img{
+                        width: 15px;
+                        height: 15px;
+                    }
+                    p{
+                        line-height: 21px;
+                    }
+                }
+            }
+            .bottom{
+                .marker{
+                    margin-bottom: 14px;
+                    img{
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+    .booking{
+        .right{
+            margin-left: 80px;
+        }
+    }
+}
+
+@media screen and ( max-width: map-get( $grid-breakpoints, lg ) + 1 ){
+  #culture-tab{
+    .availability{
+        min-height: unset;
+        .availability-slider{
+            height: 320px !important;
+        }
+        .left{
+            padding: 0;
+        }
+        .right{
+            .top{
+                margin-top: 20px;
+                margin-bottom: 20px;
+                .availability-icons{
+                    margin-top: 40px;
+                }
+                .marker{
+                    margin-bottom: 11px;
+                }
+                .h3{
+                    font-size: 16px;
+                }
+                .purple-btn{
+                    width: 108px;
+                    margin-top: 30px;
+                }
+            }
+            .money{
+                color: $main-color;
+            }
+            .availability-icons{
+                margin-top: 20px;
+            }
+            .bottom{
+                .purple-text{
+                    margin-bottom: 14px;
+                    color: $main-color;
+                }
+                .check-list{
+                    img{
+                        margin-right: 20px !important;
+                    }
+                    p{    
+                        letter-spacing: -1px;
+                    }
+                }
+                .purple-btn{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    line-height: 40px;
+                    height: 40px;
+                    font-size: 14px;
+                    background-color: $main-color;
+                    padding: 0 48px;
+                    color: #FFF !important;
+                    border-radius: 5px;
+                }
+            }
+        }
+    }
+    .booking{
+        .left{
+            padding: 0;
+        }
+        .right{
+            margin-left: 0px;
+            .bold{
+                &:first-child{
+                    margin-bottom: 0;
+                }
+            }
+            .bottom{
+                .bold{
+                    &:first-child{
+                        margin-bottom: 20px;
+                    }
+                }
+            }
+        }
+    }
+  }
+}
+
+@media screen and ( max-width: map-get( $grid-breakpoints, md ) + 1 ){
+    #culture-tab{
+        .availability{
+            .right{
+                .availability-icons{
+                    margin-top: 20px;
+                }
+                .bottom{
+                    .purple-text{
+                        margin-bottom: 20px;
+                    }
+                    .check-list{
+                        img{
+                            margin-right: 20px !important;
+                        }
+                        p{    
+                            letter-spacing: -1px;
+                        }
+                    }
+                    .purple-btn{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        line-height: 40px;
+                        height: 40px;
+                        font-size: 14px;
+                        background-color: $main-color;
+                        padding: 0 48px;
+                        color: #FFF !important;
+                        border-radius: 5px;
+                    }
+                    .left{
+                        padding: 0 !important;
+                    }
+                }
+            }
+            .glide__arrows{
+                display: none !important;
+            }
+            .glide__bullets{
+                height: 11px;
+                bottom: 15px !important;
+            }
+        }
+    }
+}

@@ -5,14 +5,12 @@ import Global from '../../base/_global';
 
 // Modules Import
 import Counter from '../../base/modules/_counter';
-import checkIn from '../../base/modules/_checkIn';
 import Form from '../../base/shared/_form';
 
 export default class HomePage {
   constructor() {
 
     new Global();
-    new checkIn();
     new Form();
 
     window.animateCounter = Counter;
