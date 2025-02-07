@@ -20,49 +20,6 @@
 </head>
 
 <body>
-    <!-- Topbar -->
-    <div class="topbar d-none">
-        <div class="container">
-            <div class="topbar-start">
-                <button class="location"><img src="assets/img/icons/location.png">
-                    <span>Ağva, Tütüngazi Cad.</span>
-                    Şile/İstanbul
-                </button>
-            </div>
-            <div class="topbar-center"></div>
-            <div class="topbar-end">
-                <button class="language-button">
-                    <div class="language-icon">
-                        <img src="assets/img/icons/tr.png" class="img-regular">
-                    </div>
-                    Türkçe
-                    <div class="language-dropdown">
-                        <div class="language-dropdown-item active">
-                            <div class="language-dropdown-item-icon">
-                                <img src="assets/img/icons/tr.png" class="img-regular">
-                            </div>
-                            Türkçe
-                        </div>
-                        <div class="language-dropdown-item">
-                            <div class="language-dropdown-item-icon">
-                                <img src="assets/img/icons/tr.png" class="img-regular">
-                            </div>
-                            Türkçe
-                        </div>
-                        <div class="language-dropdown-item">
-                            <div class="language-dropdown-item-icon">
-                                <img src="assets/img/icons/tr.png" class="img-regular">
-                            </div>
-                            Türkçe
-                        </div>
-                    </div>
-                </button>
-                <button class="telephone-button"><img src="assets/img/icons/headset.png"> <a
-                        href="tel:0850 333 24 56">0850 333 24 56</a></button>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar -->
 
     <!-- Navbar -->
     <nav class="navbar">
@@ -76,9 +33,11 @@
                 <a href="javascript:void(0);">Galeri</a>
                 <a href="javascript:void(0);">Odalarımız</a>
 
-                <a href="javascript:void(0);"
-                    class="navbar-buttons green-button-regular animation-button green-animation">
-                    <p class="desc-white mb-0 text-white">Rezervasyon Yap</p>
+                <a href="javascript:void(0);" class="navbar-buttons d-flex align-items-center justify-content-center green-button animation-button green-animation">
+                    <p class="desc-white mb-0 text-white">
+                        Rezervasyon
+                    </p>
+                    <img src="./assets/img/icons/whatsapp.png" alt="" class="whatsapp">
                 </a>
             </div>
             <div class="navbar-hamburger">
@@ -93,7 +52,7 @@
     <!-- Navbar -->
 
     <!-- Header Start -->
-    <section class="header-section">
+    <section class="header-section d-flex align-items-center">
         <div class="header-background-slider">
             <div class="glide" id="header_slide">
                 <div class="glide__track" data-glide-el="track">
@@ -121,6 +80,18 @@
                 </div>
             </div>
         </div>
+        <div class="container">
+            <div class="header-text d-flex align-items-start flex-column">
+                <h1>Hayat Ağacı Bungalov</h1>
+                <h2>Şehirden uzak güzel bir tatil</h2>
+                <a href="javascript:void(0);" class="d-flex mt-3 align-items-center justify-content-center green-button animation-button green-animation">
+                    <p class="desc-white mb-0 text-white">
+                        Rezervasyon
+                    </p>
+                    <img src="./assets/img/icons/whatsapp.png" alt="" class="whatsapp">
+                </a>
+            </div>
+        </div>
     </section>
     <!-- Header End -->
 
@@ -136,12 +107,14 @@
                         Hayat Ağacı <span>Bungalov</span>
                     </h1>
                     <!-- Desktop -->
-                    <p class="desc d-none d-xl-flex">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti sit aspernatur
+                    <p class="desc d-none d-xl-flex">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti
+                        sit aspernatur
                         aperiam nihil fuga reprehenderit ad blanditiis illum, <br> iste eius a excepturi, eligendi
                         suscipit animi! Reprehenderit nam explicabo nisi nostrum omnis dicta quasi velit maiores vero
                         illo neque vel molestias facilis laboriosam accusamus, officia corrupti optio repellat, odit
                         soluta. Provident.</p>
-                    <a href="javascript:void(0);" class="green-button animation-button green-animation d-none d-xl-flex">
+                    <a href="javascript:void(0);"
+                        class="green-button animation-button green-animation d-none d-xl-flex">
                         <p class="header-white mb-0 text-white">Biz Kimiz</p>
                         <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy"
                             alt="arrow right circle icon">
@@ -153,12 +126,14 @@
                         <img src="./assets/img/project-slider-2.jpg" alt="vision-right" loading="lazy">
                     </div>
                     <!-- Mobile -->
-                    <p class="desc d-flex d-xl-none">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti sit aspernatur
+                    <p class="desc d-flex d-xl-none">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti
+                        sit aspernatur
                         aperiam nihil fuga reprehenderit ad blanditiis illum, <br> iste eius a excepturi, eligendi
                         suscipit animi! Reprehenderit nam explicabo nisi nostrum omnis dicta quasi velit maiores vero
                         illo neque vel molestias facilis laboriosam accusamus, officia corrupti optio repellat, odit
                         soluta. Provident.</p>
-                    <a href="javascript:void(0);" class="green-button animation-button green-animation d-flex d-xl-none">
+                    <a href="javascript:void(0);"
+                        class="green-button animation-button green-animation d-flex d-xl-none">
                         <p class="header-white mb-0 text-white">Biz Kimiz</p>
                         <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy"
                             alt="arrow right circle icon">
@@ -185,7 +160,8 @@
                     </div>
                     <a href="javascript:void(0);" class="green-button animation-button green-animation">
                         <p class="header-white mb-0 text-white">Tüm Tesislerimiz</p>
-                        <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy" alt="arrow right circle icon">
+                        <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy"
+                            alt="arrow right circle icon">
                     </a>
                 </div>
 
@@ -214,7 +190,8 @@
                                     </div>
                                     <div class="detail-btn green-button animation-button green-animation">
                                         <p class="header-white mb-0 text-white">Detayları Gör</p>
-                                        <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy" alt="arrow right circle icon">
+                                        <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy"
+                                            alt="arrow right circle icon">
                                     </div>
                                 </div>
                             </div>
@@ -240,7 +217,8 @@
                                     </div>
                                     <div class="detail-btn green-button animation-button green-animation">
                                         <p class="header-white mb-0 text-white">Detayları Gör</p>
-                                        <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy" alt="arrow right circle icon">
+                                        <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy"
+                                            alt="arrow right circle icon">
                                     </div>
                                 </div>
                             </div>
@@ -265,7 +243,8 @@
                                     </div>
                                     <div class="detail-btn green-button animation-button green-animation">
                                         <p class="header-white mb-0 text-white">Detayları Gör</p>
-                                        <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy" alt="arrow right circle icon">
+                                        <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy"
+                                            alt="arrow right circle icon">
                                     </div>
                                 </div>
                             </div>
@@ -290,7 +269,8 @@
                                     </div>
                                     <div class="detail-btn green-button animation-button green-animation">
                                         <p class="header-white mb-0 text-white">Detayları Gör</p>
-                                        <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy" alt="arrow right circle icon">
+                                        <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy"
+                                            alt="arrow right circle icon">
                                     </div>
                                 </div>
                             </div>
@@ -315,7 +295,8 @@
                                     </div>
                                     <div class="detail-btn green-button animation-button green-animation">
                                         <p class="header-white mb-0 text-white">Detayları Gör</p>
-                                        <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy" alt="arrow right circle icon">
+                                        <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy"
+                                            alt="arrow right circle icon">
                                     </div>
                                 </div>
                             </div>
@@ -331,7 +312,8 @@
     <section id="video">
         <div class="container h-100">
             <div class="video-holder">
-                <video id="my_video" class="img-regular" preload="none" loading="lazy" playsinline="" poster="./assets/img/project-slider-1.jpg" src="./assets/img/video/yuruyus.mp4"></video>
+                <video id="my_video" class="img-regular" preload="none" loading="lazy" playsinline=""
+                    poster="./assets/img/project-slider-1.jpg" src="./assets/img/video/yuruyus.mp4"></video>
                 <a href="javascript:void(0);" id="play_video"><img src="./assets/img/icons/play-btn.png" alt=""></a>
                 <a href="javascript:void(0);" id="pause_video" class="position-absolute"></a>
             </div>
@@ -404,7 +386,7 @@
                     </div>
                     <!-- Desktop -->
                     <a href="https://www.google.com/maps/dir//Ak%C3%A7ay,+Sapanca+Hayat+A%C4%9Fac%C4%B1+Bungalov,+Sapanca,+Orta+6.Sk+No:10,+54600+Sapanca%2FSakarya/@40.6708599,30.3305649,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x14ccaf520c372197:0x51704693ce7449ea!2m2!1d30.3331278!2d40.6708424!3e0?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"
-                    target="_blank" class="green-button animation-button green-animation d-none d-xl-flex">
+                        target="_blank" class="green-button animation-button green-animation d-none d-xl-flex">
                         <p class="header-white mb-0 text-white">Yol Tarifi Al</p>
                         <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy"
                             alt="arrow right circle icon">
@@ -421,10 +403,9 @@
             <!-- Mobile -->
             <div class="d-flex d-xl-none align-items-start">
                 <a href="https://www.google.com/maps/dir//Ak%C3%A7ay,+Sapanca+Hayat+A%C4%9Fac%C4%B1+Bungalov,+Sapanca,+Orta+6.Sk+No:10,+54600+Sapanca%2FSakarya/@40.6708599,30.3305649,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x14ccaf520c372197:0x51704693ce7449ea!2m2!1d30.3331278!2d40.6708424!3e0?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"
-                target="_blank" class="green-button animation-button green-animation">
+                    target="_blank" class="green-button animation-button green-animation">
                     <p class="header-white mb-0 text-white">Yol Tarifi Al</p>
-                    <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy"
-                        alt="arrow right circle icon">
+                    <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy" alt="arrow right circle icon">
                 </a>
             </div>
             <!-- Mobile -->
@@ -445,27 +426,34 @@
             <div class="accordion accordion-flush" id="accordionFlushExample">
                 <div class="accordion-item" data-animate-way="top-bottom">
                     <h2 class="accordion-header" id="flush-acc-1">
-                        <a href="javascript:void(0);" class="accordion-button d-flex align-items-center justify-content-between collapsed" type="button" data-toggle="collapse" data-target="#acc-1" aria-expanded="false" aria-controls="acc-1">
+                        <a href="javascript:void(0);"
+                            class="accordion-button d-flex align-items-center justify-content-between collapsed"
+                            type="button" data-toggle="collapse" data-target="#acc-1" aria-expanded="false"
+                            aria-controls="acc-1">
                             <p class="title mb-0">Lorem, ipsum dolor.</p>
                             <div class="right d-flex align-items-center justify-content-center"></div>
                         </a>
                     </h2>
-                    <div id="acc-1" class="accordion-collapse collapse"
-                        aria-labelledby="flush-acc-1" data-parent="#accordionFlushExample">
+                    <div id="acc-1" class="accordion-collapse collapse" aria-labelledby="flush-acc-1"
+                        data-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus accusantium eum similique consequuntur minus saepe magnam quae reiciendis facere laborum.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus accusantium eum
+                                similique consequuntur minus saepe magnam quae reiciendis facere laborum.</p>
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item" data-animate-way="top-bottom">
                     <h2 class="accordion-header" id="flush-acc-2">
-                        <a href="javascript:void(0);" class="accordion-button d-flex align-items-center justify-content-between collapsed" type="button" data-toggle="collapse" data-target="#acc-2" aria-expanded="false" aria-controls="acc-2">
+                        <a href="javascript:void(0);"
+                            class="accordion-button d-flex align-items-center justify-content-between collapsed"
+                            type="button" data-toggle="collapse" data-target="#acc-2" aria-expanded="false"
+                            aria-controls="acc-2">
                             <p class="title mb-0">Lorem, ipsum dolor.</p>
                             <div class="right d-flex align-items-center justify-content-center"></div>
                         </a>
                     </h2>
-                    <div id="acc-2" class="accordion-collapse collapse"
-                        aria-labelledby="flush-acc-2" data-parent="#accordionFlushExample">
+                    <div id="acc-2" class="accordion-collapse collapse" aria-labelledby="flush-acc-2"
+                        data-parent="#accordionFlushExample">
                         <div class="accordion-body">
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, ab?</p>
                         </div>
@@ -473,15 +461,22 @@
                 </div>
                 <div class="accordion-item" data-animate-way="top-bottom">
                     <h2 class="accordion-header" id="flush-acc-3">
-                        <a href="javascript:void(0);" class="accordion-button d-flex align-items-center justify-content-between collapsed" type="button" data-toggle="collapse" data-target="#acc-3" aria-expanded="false" aria-controls="acc-3">
+                        <a href="javascript:void(0);"
+                            class="accordion-button d-flex align-items-center justify-content-between collapsed"
+                            type="button" data-toggle="collapse" data-target="#acc-3" aria-expanded="false"
+                            aria-controls="acc-3">
                             <p class="title mb-0">Lorem, ipsum dolor.</p>
                             <div class="right d-flex align-items-center justify-content-center"></div>
                         </a>
                     </h2>
-                    <div id="acc-3" class="accordion-collapse collapse"
-                        aria-labelledby="flush-acc-3" data-parent="#accordionFlushExample">
+                    <div id="acc-3" class="accordion-collapse collapse" aria-labelledby="flush-acc-3"
+                        data-parent="#accordionFlushExample">
                         <div class="accordion-body">
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti impedit laboriosam repellat odio cumque in qui, adipisci quos iusto aut quo dolorum illo tempora possimus enim. Exercitationem saepe doloremque, nostrum soluta esse vitae veritatis quis sed reprehenderit praesentium, illum perspiciatis id molestias suscipit repudiandae amet dolore. Iusto a repellendus dignissimos.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti impedit laboriosam
+                                repellat odio cumque in qui, adipisci quos iusto aut quo dolorum illo tempora possimus
+                                enim. Exercitationem saepe doloremque, nostrum soluta esse vitae veritatis quis sed
+                                reprehenderit praesentium, illum perspiciatis id molestias suscipit repudiandae amet
+                                dolore. Iusto a repellendus dignissimos.</p>
                         </div>
                     </div>
                 </div>
@@ -513,11 +508,19 @@
                         <ul class="glide__slides">
                             <li class="glide__slide">
                                 <div class="customers-slider-item d-flex flex-column justify-content-between">
-                                    <img class="logo" src="./assets/img/icons/logo.jpg" alt="" />
+
+                                    <div class="customers-slider-item-icon">
+                                        <svg viewBox="0 0 512 512" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path
+                                                d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z">
+                                            </path>
+                                        </svg>
+                                    </div>
                                     <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
                                         voluptatem exercitationem corporis consequuntur, nesciunt labore.
                                     </p>
-                                    <div class="d-flex flex-column align-items-start">
+                                    <div class="d-flex flex-column align-items-center">
                                         <p class="h7 mb-0">Kaan Özdemir</p>
                                         <div class="d-flex align-items-center mt-2">
                                             <img src="./assets/img/icons/star.png" alt="star">
@@ -531,11 +534,19 @@
                             </li>
                             <li class="glide__slide">
                                 <div class="customers-slider-item d-flex flex-column justify-content-between">
-                                    <img class="logo" src="./assets/img/icons/logo.jpg" alt="" />
+
+                                    <div class="customers-slider-item-icon">
+                                        <svg viewBox="0 0 512 512" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path
+                                                d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z">
+                                            </path>
+                                        </svg>
+                                    </div>
                                     <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
                                         voluptatem exercitationem corporis consequuntur, nesciunt labore.
                                     </p>
-                                    <div class="d-flex flex-column align-items-start">
+                                    <div class="d-flex flex-column align-items-center">
                                         <p class="h7 mb-0">Kaan Özdemir</p>
                                         <div class="d-flex align-items-center mt-2">
                                             <img src="./assets/img/icons/star.png" alt="star">
@@ -549,11 +560,19 @@
                             </li>
                             <li class="glide__slide">
                                 <div class="customers-slider-item d-flex flex-column justify-content-between">
-                                    <img class="logo" src="./assets/img/icons/logo.jpg" alt="" />
+
+                                    <div class="customers-slider-item-icon">
+                                        <svg viewBox="0 0 512 512" fill="currentColor"
+                                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                            <path
+                                                d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z">
+                                            </path>
+                                        </svg>
+                                    </div>
                                     <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed
                                         voluptatem exercitationem corporis consequuntur, nesciunt labore.
                                     </p>
-                                    <div class="d-flex flex-column align-items-start">
+                                    <div class="d-flex flex-column align-items-center">
                                         <p class="h7 mb-0">Kaan Özdemir</p>
                                         <div class="d-flex align-items-center mt-2">
                                             <img src="./assets/img/icons/star.png" alt="star">
@@ -591,96 +610,6 @@
     </section>
     <!-- Customers -->
 
-    <!-- Form Start -->
-    <section class="section-contact-form" id="footerForm">
-        <div class="container">
-            <div class="contact-form">
-                <div class="contact-form-text">
-                    <div class="header-container">
-                        <div class="header">
-                            <h3 class="header--subtitle">
-                                Hakkımızda
-                            </h3>
-                            <h1 class="header--title">
-                                Hayat Ağacı <span>Bungalov</span>
-                            </h1>
-                            <p class="desc">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deleniti sit
-                                aspernatur
-                                aperiam nihil fuga reprehenderit ad blanditiis illum, <br> iste eius a excepturi,
-                                eligendi
-                                suscipit animi! Reprehenderit nam explicabo nisi nostrum omnis dicta quasi velit maiores
-                                vero
-                                illo neque vel molestias facilis laboriosam accusamus, officia corrupti optio repellat,
-                                odit
-                                soluta. Provident.</p>
-                            <a target="_blank"
-                                href="https://www.google.com/maps/dir//Ak%C3%A7ay,+Sapanca+Hayat+A%C4%9Fac%C4%B1+Bungalov,+Sapanca,+Orta+6.Sk+No:10,+54600+Sapanca%2FSakarya/@40.6708599,30.3305649,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x14ccaf520c372197:0x51704693ce7449ea!2m2!1d30.3331278!2d40.6708424!3e0?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"
-                                class="green-button animation-button green-animation">
-                                <p class="header-white mb-0 text-white">İletişim</p>
-                                <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy"
-                                    alt="arrow right circle icon">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form-content">
-                    <div id="form-active">
-                        <form method="post" id="form-fixed">
-                            <div class="form-group firstname">
-                                <input type="text" id="firstname" class="form-control non-numeric" name="firstname"
-                                    placeholder="AD - SOYAD" autocomplete="off" data-required="true">
-                                <small id="first-name-danger">This field is required.</small>
-                            </div>
-                            <div class="form-group phone">
-                                <input type="text" id="phone" class="form-control numeric-input phone-custom"
-                                    name="phone" autocomplete="off" placeholder="TELEFON" data-required="true">
-                                <small id="phone-danger">Please enter a valid phone number.</small>
-                            </div>
-                            <div class="form-group email">
-                                <input type="text" id="email" class="form-control" name="email" placeholder="E-Mail"
-                                    autocomplete="off" data-required="true">
-                                <small id="email-danger">Please enter a valid email address.</small>
-                            </div>
-                            <div class="form-group message">
-                                <textarea type="message" class="form-control" data-required="true" name="message"
-                                    id="message" placeholder="Mesaj" rows="1"></textarea>
-                                <small id="comment-danger" class="text-danger">Bu alan zorunludur.</small>
-                            </div>
-                            <div class="form-bottom">
-                                <div class="form-checks">
-                                    <div class="form-check">
-                                        <label class="checkbox" for="kvkk1Check">
-                                            <input type="checkbox" name="check" id="kvkk1Check">
-                                            Kişisel Aydınlatma Metni’ni okudum,
-                                            onaylıyorum.
-                                        </label>
-                                        <small id="kvkk-one-danger">Lütfen okuyup onaylayınız.</small>
-                                    </div>
-                                    <div class="form-check">
-                                        <label class="checkbox" for="kvkk2Check">
-                                            <input type="checkbox" name="check" id="kvkk2Check">
-                                            Kişisel Aydınlatma Metni’ni okudum,
-                                            onaylıyorum.
-                                        </label>
-                                        <small id="kvkk-two-danger">Lütfen okuyup onaylayınız.</small>
-                                    </div>
-                                </div>
-                                <div id="recaptcha" class="captcha"></div>
-                                <small id="captcha-danger" class="text-danger">Please enter a valid phone
-                                    number.</small>
-                                <a href="javascript:void(0);" id="formButton"
-                                    class="green-button animation-button green-animation">
-                                    Gönder
-                                </a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Form End -->
-
     <!-- Footer Start -->
     <footer id="footer">
         <div class="container px-lg-0">
@@ -689,7 +618,8 @@
                     <img src="./assets/img/icons/logo.jpg" alt="logo">
                 </a>
                 <div class="right d-flex flex-lg-row">
-                    <div class="socail-buttons d-flex flex-row justify-content-start justify-content-lg-end align-items-start align-items-lg-center">
+                    <div
+                        class="socail-buttons d-flex flex-row justify-content-start justify-content-lg-end align-items-start align-items-lg-center">
                         <a href="javascript:void(0);"
                             class="socail-circle-btn btn-blue hover-img d-flex align-items-center justify-content-center">
                             <img src="./assets/img/icons/social-instagram-white.svg" loading="lazy" alt="instagram">
@@ -712,7 +642,8 @@
         </div>
         <div class="line"></div>
         <div class="container px-lg-0">
-            <div class="bottom d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center">
+            <div
+                class="bottom d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center">
                 <a href="javascript:void(0);" class="left desc-small-regular-white">
                     Hayat Ağacı Bungalov
                 </a>

@@ -18,49 +18,6 @@
 </head>
 
 <body>
-    <!-- Topbar -->
-    <div class="topbar d-none">
-        <div class="container">
-            <div class="topbar-start">
-                <button class="location"><img src="assets/img/icons/location.png">
-                    <span>Ağva, Tütüngazi Cad.</span>
-                    Şile/İstanbul
-                </button>
-            </div>
-            <div class="topbar-center"></div>
-            <div class="topbar-end">
-                <button class="language-button">
-                    <div class="language-icon">
-                        <img src="assets/img/icons/tr.png" class="img-regular">
-                    </div>
-                    Türkçe
-                    <div class="language-dropdown">
-                        <div class="language-dropdown-item active">
-                            <div class="language-dropdown-item-icon">
-                                <img src="assets/img/icons/tr.png" class="img-regular">
-                            </div>
-                            Türkçe
-                        </div>
-                        <div class="language-dropdown-item">
-                            <div class="language-dropdown-item-icon">
-                                <img src="assets/img/icons/tr.png" class="img-regular">
-                            </div>
-                            Türkçe
-                        </div>
-                        <div class="language-dropdown-item">
-                            <div class="language-dropdown-item-icon">
-                                <img src="assets/img/icons/tr.png" class="img-regular">
-                            </div>
-                            Türkçe
-                        </div>
-                    </div>
-                </button>
-                <button class="telephone-button"><img src="assets/img/icons/headset.png"> <a
-                        href="tel:0850 333 24 56">0850 333 24 56</a></button>
-            </div>
-        </div>
-    </div>
-    <!-- Topbar -->
 
     <!-- Navbar -->
     <nav class="navbar">
@@ -74,9 +31,11 @@
                 <a href="javascript:void(0);">Galeri</a>
                 <a href="javascript:void(0);">Odalarımız</a>
 
-                <a href="javascript:void(0);"
-                    class="navbar-buttons green-button-regular animation-button green-animation">
-                    <p class="desc-white mb-0 text-white">Rezervasyon Yap</p>
+                <a href="javascript:void(0);" class="navbar-buttons d-flex align-items-center justify-content-center green-button animation-button green-animation">
+                    <p class="desc-white mb-0 text-white">
+                        Rezervasyon
+                    </p>
+                    <img src="./assets/img/icons/whatsapp.png" alt="" class="whatsapp">
                 </a>
             </div>
             <div class="navbar-hamburger">
@@ -111,119 +70,44 @@
     </section>
     <!-- Header End -->
 
-    <!-- Form Start -->
-    <section class="section-contact-form" id="footerForm">
-        <div class="container">
-            <div class="contact-form">
-                <div class="contact-form-text">
-                    <div class="header-container">
-                        <div class="header">
-                            <h3 class="header--subtitle">
-                                İletişim
-                            </h3>
-                            <h1 class="header--title">
-                                Yerinizi Hemen <span>Ayırtın!</span>
-                            </h1>
-                            <p class="desc">
-                                Avantajlı fiyatlarla yerinizi ayırtmak için bizi arayabilir, formu doldurabilir ya da
-                                mail üzeriden iletişime geçebilrisiniz.
-                            </p>
-                            <div class="contact-items">
-                                <div class="contact-item">
-                                    <h4> <img src="assets/img/icons/phone.png" class="img-fluid" /> Telefon</h4>
-                                    <p>+90 505 951 4561</p>
-                                </div>
-                                <div class="contact-item">
-                                    <h4><img src="assets/img/icons/mail.png" class="img-fluid" />Mail</h4>
-                                    <p>info@hayatagacibungalov.com</p>
-                                </div>
-                                <div class="contact-item">
-                                    <h4><img src="assets/img/icons/pin.png" class="img-fluid" />Adres</h4>
-                                    <p>Akçay, Sapanca, Orta 6.Sk No:10, 54600 Sapanca/Sakarya</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form-content">
-                    <div id="form-active">
-                        <form method="post" id="form-fixed">
-                            <div class="form-group firstname">
-                                <input type="text" id="firstname" class="form-control non-numeric" name="firstname"
-                                    placeholder="AD - SOYAD" autocomplete="off" data-required="true">
-                                <small id="first-name-danger">This field is required.</small>
-                            </div>
-                            <div class="form-group phone">
-                                <input type="text" id="phone" class="form-control numeric-input phone-custom"
-                                    name="phone" autocomplete="off" placeholder="TELEFON" data-required="true">
-                                <small id="phone-danger">Please enter a valid phone number.</small>
-                            </div>
-                            <div class="form-group email">
-                                <input type="text" id="email" class="form-control" name="email" placeholder="E-Mail"
-                                    autocomplete="off" data-required="true">
-                                <small id="email-danger">Please enter a valid email address.</small>
-                            </div>
-                            <div class="form-group message">
-                                <textarea type="message" class="form-control" data-required="true" name="message"
-                                    id="message" placeholder="Mesaj" rows="1"></textarea>
-                                <small id="comment-danger" class="text-danger">Bu alan zorunludur.</small>
-                            </div>
-                            <div class="form-bottom">
-                                <div class="form-checks">
-                                    <div class="form-check">
-                                        <label class="checkbox" for="kvkk1Check">
-                                            <input type="checkbox" name="check" id="kvkk1Check">
-                                            Kişisel Aydınlatma Metni’ni okudum,
-                                            onaylıyorum.
-                                        </label>
-                                        <small id="kvkk-one-danger">Lütfen okuyup onaylayınız.</small>
-                                    </div>
-                                    <div class="form-check">
-                                        <label class="checkbox" for="kvkk2Check">
-                                            <input type="checkbox" name="check" id="kvkk2Check">
-                                            Kişisel Aydınlatma Metni’ni okudum,
-                                            onaylıyorum.
-                                        </label>
-                                        <small id="kvkk-two-danger">Lütfen okuyup onaylayınız.</small>
-                                    </div>
-                                </div>
-                                <div id="recaptcha" class="captcha"></div>
-                                <small id="captcha-danger" class="text-danger">Please enter a valid phone
-                                    number.</small>
-                                <a href="javascript:void(0);" id="formButton"
-                                    class="green-button animation-button green-animation">
-                                    Gönder
-                                </a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Form End -->
 
     <!-- Map -->
     <section id="map">
         <div class="container">
-            <div class="header-container">
-                <div class="header col-12 px-0 d-flex justify-content-between align-items-center">
-                    <div class="">
+            <div class="contact-form-text">
+                <div class="header-container">
+                    <div class="header">
                         <h3 class="header--subtitle">
-                            Konumumuz
+                            İletişim
                         </h3>
                         <h1 class="header--title">
-                            Konumumuzun <span>Avantajları</span>
+                            Yerinizi Hemen <span>Ayırtın!</span>
                         </h1>
+                        <p class="desc">
+                            Avantajlı fiyatlarla yerinizi ayırtmak için bizi arayabilir, formu doldurabilir ya da
+                            mail üzeriden iletişime geçebilrisiniz.
+                        </p>
+                        <div class="contact-items">
+                            <div class="contact-item">
+                                <h4> <img src="assets/img/icons/phone.png" class="img-fluid" /> Telefon</h4>
+                                <p>+90 505 951 4561</p>
+                            </div>
+                            <div class="contact-item">
+                                <h4><img src="assets/img/icons/mail.png" class="img-fluid" />Mail</h4>
+                                <p>info@hayatagacibungalov.com</p>
+                            </div>
+                            <div class="contact-item">
+                                <h4><img src="assets/img/icons/pin.png" class="img-fluid" />Adres</h4>
+                                <p>Akçay, Sapanca, Orta 6.Sk No:10, 54600 Sapanca/Sakarya</p>
+                            </div>
+                        </div>
+                        <a href="https://www.google.com/maps/dir//Ak%C3%A7ay,+Sapanca+Hayat+A%C4%9Fac%C4%B1+Bungalov,+Sapanca,+Orta+6.Sk+No:10,+54600+Sapanca%2FSakarya/@40.6708599,30.3305649,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x14ccaf520c372197:0x51704693ce7449ea!2m2!1d30.3331278!2d40.6708424!3e0?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"
+                            target="_blank" class="green-button mt-4 animation-button green-animation">
+                            <p class="header-white mb-0 text-white">Yol Tarifi Al</p>
+                            <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy"
+                                alt="arrow right circle icon">
+                        </a>
                     </div>
-                    <!-- Desktop -->
-                    <a href="https://www.google.com/maps/dir//Ak%C3%A7ay,+Sapanca+Hayat+A%C4%9Fac%C4%B1+Bungalov,+Sapanca,+Orta+6.Sk+No:10,+54600+Sapanca%2FSakarya/@40.6708599,30.3305649,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x14ccaf520c372197:0x51704693ce7449ea!2m2!1d30.3331278!2d40.6708424!3e0?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"
-                        target="_blank" class="green-button animation-button green-animation d-none d-xl-flex">
-                        <p class="header-white mb-0 text-white">Yol Tarifi Al</p>
-                        <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy"
-                            alt="arrow right circle icon">
-                    </a>
-                    <!-- Desktop -->
                 </div>
             </div>
             <div class="right col-12 px-0">
@@ -232,15 +116,6 @@
                     style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <!-- Mobile -->
-            <div class="d-flex d-xl-none align-items-start">
-                <a href="https://www.google.com/maps/dir//Ak%C3%A7ay,+Sapanca+Hayat+A%C4%9Fac%C4%B1+Bungalov,+Sapanca,+Orta+6.Sk+No:10,+54600+Sapanca%2FSakarya/@40.6708599,30.3305649,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x14ccaf520c372197:0x51704693ce7449ea!2m2!1d30.3331278!2d40.6708424!3e0?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D"
-                    target="_blank" class="green-button animation-button green-animation">
-                    <p class="header-white mb-0 text-white">Yol Tarifi Al</p>
-                    <img src="./assets/img/icons/arrow-right-circle.svg" loading="lazy" alt="arrow right circle icon">
-                </a>
-            </div>
-            <!-- Mobile -->
         </div>
     </section>
     <!-- Map -->
