@@ -530,8 +530,8 @@
 // video
 #video {
   width: 100%;
-  height: calc(100vh - 80px);
-  max-height: 800px;
+  height: 100vh;
+  max-height: 1200px;
   margin: 60px 0;
 
   .video-holder {
@@ -614,29 +614,9 @@
   }
 
   @media screen and (max-width: 1200px) {
-    height: 232px;
+    height: 300px;
     margin: 40px 0;
     padding: 0;
-
-    .container {
-      padding: 0;
-    }
-  }
-}
-
-// video alternative
-#video-alternative {
-  width: 100%;
-  padding: 60px 0;
-  margin: 30px 0 60px 0;
-  height: calc(100vh - 80px);
-
-  iframe {
-    pointer-events: none;
-  }
-
-  @media screen and (max-width: 1800px) {
-    padding: 20px 0;
   }
 }
 
@@ -976,6 +956,18 @@
     .accordion-body {
       margin-bottom: 64px; 
     }
+  }
+}
+
+// video
+#video-iframe {
+  width: 100%;
+  padding: 60px 0;
+  margin: 30px 0 60px 0;
+  height: calc(100vh - 80px);
+
+  @media screen and (max-width: 1800px) {
+    padding: 20px 0;
   }
 }
 
